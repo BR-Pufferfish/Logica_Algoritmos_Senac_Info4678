@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Three Inputs Exercise</title>
+    </head>
+    <body>
+        <input type="text" id="name_st">
+        <br>
+        <input type="text" id="name_nd">
+        <br>
+        <input type="text" id="name_rd">
+        <br>
+        <button onclick="showTypedData()">Dont click</button>
+
+        <script>
+            function showTypedData(){
+                var name_st = document.getElementById("name_st").value;
+                var name_nd = document.getElementById("name_nd").value;
+                var name_rd = document.getElementById("name_rd").value;
+                alert(name_st + " " + name_nd + " " + name_rd)
+            }
+        </script>
+    </body>
+</html>
