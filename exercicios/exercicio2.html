@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <p>2. Faça um programa que leia o nome de uma pessoa e mostre uma mensagem de boas vindas para ela.</p>
+    <br>
+    <p>Qual o seu nome?</p>
+    <input type="text" id="userName">
+    <br>
+    <p>Qual o seu salário?</p>
+    <input type="number" id="userWage">
+    <br>
+    <button onclick="showNameWage()">Validar</button>
+
+    <script>
+        function showNameWage(){
+        var userName = document.getElementById("userName").value;
+        var userWage = document.getElementById("userWage").value;
+        alert(`Olá Sr./Sra. ${userName}, seu salário é ${userWage}`)
+        }
+    </script>
+
+
+
+</body>
+</html>

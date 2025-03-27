@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <p>3. Crie um programa que leia o nome e o salário de um funcionário, mostrando no final uma mensagem.</p>
+    <br>
+    <p>Digite seu nome:</p><input type="text" id="userName">
+    <br>
+    <p>Digite seu salário:</p><input type="number" id="userWage">
+    <br>
+    <button onclick="showNameWage()">Verificar Dados</button>
+    
+    <script>
+        function showNameWage(){
+            var nameUser = document.getElementById("userName").value;
+            var wageUser = document.getElementById("userWage").value;
+            alert(`O colaborador ${nameUser} recebeu o salário no valor de R$ ${wageUser} no mês passado.`)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio extra Soma</title>
+</head>
+<body>
+    <p>Qual a sua idade?</p>
+    <input type="number" id = "age_year">
+    <br>
+    <p>Em que ano estamos?</p>
+    <input type="number" id = "current_year">
+    <button onclick="showYearSoma()">Calcular Soma</button>
+
+    <script>
+        function showYearSoma(){
+            var yearAge = document.getElementById("age_year").value;
+            var yearCurrent = document.getElementById("current_year").value;
+            var yearSoma = Number(yearAge) + Number(yearCurrent);
+            alert(`A soma entre a sua idade e o ano atual é ${yearSoma}`);
+        }
+    </script>
+</body>
+</html>
