@@ -16,9 +16,9 @@
     <script>
         function showCalcNum(){
             var typedNumb = document.getElementById("typedNumb").value;
-            var typedDoub = Number(typedNumber) *2;
-            var typedTerc = Number(typedNumber) /3;
-            alert(`Tendo ${typedNumber}, seu dobro é ${typedNumDoub} e sua terça parte é ${typedNumTerc}`)
+            var typedDoub = Number(typedNumb) *2;
+            var typedTerc = (Number(typedNumb) /3).toFixed(3);
+            alert(`Tendo ${typedNumb}, seu dobro é ${typedDoub} e sua terça parte é ${typedTerc}`)
         }
     </script>
 </body>
