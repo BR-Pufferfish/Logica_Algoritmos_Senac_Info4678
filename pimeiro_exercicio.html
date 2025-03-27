@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade</title>
+</head>
+<body>
+    <p>Em que ano você nasceu?</p>
+    <input type = number id = "birthday">
+    <br>
+    <p>Em que ano estamos?</p>
+    <input type = number id = "todays_year">
+    <br>
+    <button onclick="showCurrentAge()">Calcular</button>
+
+    <script>
+        function showCurrentAge(){
+            var birthday_in = document.getElementById ("birthday").value;
+            var today_year_in = document.getElementById ("todays_year").value;
+            var calc_years = today_year_in - birthday_in;
+            //Crase serve para concatenar, e utilizando ${} podemos inserir uma VAR dentro de uma string.
+            alert(`Você tem ${calc_years} anos!`);
+
+        }
+    </script>
+</body>
+</html>
