@@ -15,12 +15,12 @@
     <script>
         function showConversion(){
             var distMetro = document.getElementById("metros").value;
-            var distMm = Number(distMetro) *0.001;
-            var distCm = Number(distMetro) *0.01;
-            var distDm = Number(distMetro) *0.1;
-            var distDam = Number(distMetro) *10;
-            var distHm = Number(distMetro) *100;
-            var distKm = Number(distMetro) *1000;
+            var distMm = Number(distMetro) *1000;
+            var distCm = Number(distMetro) *100;
+            var distDm = Number(distMetro) *10;
+            var distDam = Number(distMetro) *0.1;
+            var distHm = Number(distMetro) *0.01;
+            var distKm = Number(distMetro) *0.001;
             alert(`O comprimento de ${distMetro}m é igual a: ${distMm}mm, ${distCm}cm, ${distDm}dm, ${distDam}dam, ${distHm}hm e ${distKm}km.`)
         }
     </script>
