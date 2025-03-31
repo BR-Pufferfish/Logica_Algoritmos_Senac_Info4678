@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+<body>
+    <p>9. Faça um algoritmo que o usuário irá digitar o quanto dinheiro uma pessoa tem na carteira (em R$) e mostre quantos dólares ela pode comprar.</p>
+    <br>
+    <p>Quantos reais você tem?</p>
+    <input type="number" id="money">
+    <br>
+    <button onclick="showDollar()">Converter Valores</button>
+
+    <script>
+        function showDollar(){
+        var userBrl = document.getElementById("money").value;
+        var conversionBrl = userBrl / 5.76;
+        alert(`Com seus R$ ${userBrl}, podes comprar ${conversionBrl} dólares`)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+<body>
+    <p>12. Crie um programa que o usuário irá digitar o preço de um produto, calcule e mostre o seu PREÇO PROMOCIONAL, com 5% de desconto.</p>
+    <p>Insira um valor</p>
+    <input type="number" id="startValue">
+    <br>
+    <button onclick="showDiscount()">Calcular Desconto</button>
+
+    <script>
+        function showDiscount(){
+            var cost = document.getElementById("startValue").value;
+            var discount = cost * 0.95;
+            alert(`Ao aplicar um desconto de 5% em R$ ${cost} temos o valor de R$ ${discount}`)
+        }
+    </script>
+</body>
+</html>

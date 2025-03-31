@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <p>11. Desenvolva uma lógica que o usuário irá digitar os valores de A, B e C de uma equação do segundo grau e mostre o valor de Delta. </p>
+    <br>
+    <p>Digite o valor de A:</p><input type="number" id="valueA">
+    <p>Digite o valor de B:</p><input type="number" id="valueB">
+    <p>Digite o valor de C:</p><input type="number" id="valueC">
+    <br>
+    <button onclick="solveDelta()">Calcular Delta</button>
+    
+    <script>
+        function solveDelta(){
+            var valueA = document.getElementById("valueA").value;
+            var valueB = document.getElementById("valueB").value;
+            var valueC = document.getElementById("valueC").value;
+            var valueDelta = (valueB * valueB) - (4 * valueA * valueC);
+            alert(`Tendo os valores ${valueA} para A; ${valueB} para B e ${valueC} para C ,podemos calcular Delta como ${valueDelta}`)
+        }
+    </script>
+</body>
+</html>
