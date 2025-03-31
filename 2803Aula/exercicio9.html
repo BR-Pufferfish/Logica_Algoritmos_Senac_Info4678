@@ -16,7 +16,7 @@
     <script>
         function showDollar(){
         var userBrl = document.getElementById("money").value;
-        var conversionBrl = userBrl / 5.76;
+        var conversionBrl = (userBrl / 5.76).toFixed(2);
         alert(`Com seus R$ ${userBrl}, podes comprar ${conversionBrl} dólares`)
         }
     </script>

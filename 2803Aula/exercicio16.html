@@ -15,11 +15,11 @@
     <button onclick="showLifeReduction()">Calcular</button>
     <script>
         function showLifeReduction(){
-            var cigarrosDia = document.getElementById("cigarreteDays").value;
-            var fumandoAnos = document.getElementById("smokingYears").value;
-            var fumandoAnosDia = fumandoAnos * 365;
-            var fumandoTempoDia = (cigarrosDia * 10) / 1440;
-            alert(`Você perdeu um total de ${fumandoTempoDia} dias`)
+            var cigarreteDays = document.getElementById("cigarreteDays").value;
+            var smokingYears = document.getElementById("smokingYears").value;
+            var smokingYearsDay = smokingYears * 365;
+            var smokingTimeDay = (cigarreteDays * 10) / 1440;
+            alert(`Você perdeu um total de ${smokingTimeDay} dias`)
         }
     </script>
 </body>
