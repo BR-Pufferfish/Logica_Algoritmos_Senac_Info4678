@@ -39,6 +39,59 @@ Iniciante 1005
 <script>
     var A = parseFloat(lines[0]).toFixed(1);
     var B = parseFloat(lines[1]).toFixed(1);
-    var media = ((A+B)/2).toFixed(5);
+    var media = (((A*3.5)+(B*7.5))/11).toFixed(5);
     console.log("MEDIA = "+media);
+</script>
+
+Iniciante 1006
+<script>
+    var A = parseFloat(lines[0]).toFixed(1);
+    var B = parseFloat(lines[1]).toFixed(1);
+    var C = parseFloat(lines[2]).toFixed(1);
+    var media = (((A*2)+(B*3)+(C*5))/10).toFixed(1);
+    console.log("MEDIA = "+media);
+</script>
+
+Iniciante 1007
+<script>
+    var A = parseFloat(lines[0]);
+    var B = parseInt(lines[1]);
+    var C = parseInt(lines[2]);
+    var D = parseInt(lines[3]);
+    var dif = (A*B - C*D);
+    console.log("DIFERENCA = "+dif);
+</script>
+
+Iniciante 1008
+<script>
+    var A = parseInt(lines[0]);
+    var B = parseInt(lines[1]);
+    var C = parseFloat(lines[2]);
+    var salario = (B*C).toFixed(2);
+    console.log("NUMBER = "+A+"\n"+"SALARY = U$ "+salario)
+</script>
+
+Iniciante 1009
+<script>
+    var A = String(lines[0]);
+    var B = parseFloat(lines[1]);
+    var C = parseFloat(lines[2]);
+    var salario = parseFloat(B+C*0.15).toFixed(2);
+    console.log("TOTAL = R$ "+salario);
+</script>
+
+Iniciante 1010
+<script>
+    //lines[0] = 12 1 5.30  -->  var linha1 = lines[0].split(" ")  -->  linha1[0]=12
+    //lines[1] = 16 2 5.10  -->  var linha2 = lines[1].split(" ")  -->  linha2[0]=16
+    var linha1 = lines[0].split(" ");
+    var linha2 = lines[1].split(" ");
+    var A = parseInt(linha1[0]);
+    var B = parseInt(linha1[1]);
+    var C = parseFloat(linha1[2]).toFixed(2);
+    var D = parseInt(linha2[0]);
+    var E = parseInt(linha2[1]);
+    var F = parseFloat(linha2[2]).toFixed(2);
+    var soma1 = Number((B*C)+(E*F)).toFixed(2);
+    console.log("VALOR A PAGAR: R$ "+soma1);
 </script>
