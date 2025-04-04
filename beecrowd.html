@@ -3,6 +3,7 @@ Iniciante 1000
     console.log("Hello World!");
 </script>
 
+
 Iniciante 1001
 <script>
     var A = parseInt(lines[0]);
@@ -10,6 +11,7 @@ Iniciante 1001
     var resultado = A + B;
     console.log("X = "+resultado)
 </script>
+
 
 Iniciante 1002
 <script>
@@ -19,6 +21,7 @@ Iniciante 1002
     console.log("A="+area);
 </script>
 
+
 Iniciante 1003
 <script>
     var A = parseInt(lines[0]);
@@ -26,6 +29,7 @@ Iniciante 1003
     var soma = A+B;
     console.log("SOMA = "+soma);
 </script>
+
 
 Iniciante 1004
 <script>
@@ -35,6 +39,7 @@ Iniciante 1004
     console.log("PROD = "+PROD);
 </script>
 
+
 Iniciante 1005
 <script>
     var A = parseFloat(lines[0]).toFixed(1);
@@ -42,6 +47,7 @@ Iniciante 1005
     var media = (((A*3.5)+(B*7.5))/11).toFixed(5);
     console.log("MEDIA = "+media);
 </script>
+
 
 Iniciante 1006
 <script>
@@ -51,6 +57,7 @@ Iniciante 1006
     var media = (((A*2)+(B*3)+(C*5))/10).toFixed(1);
     console.log("MEDIA = "+media);
 </script>
+
 
 Iniciante 1007
 <script>
@@ -62,6 +69,7 @@ Iniciante 1007
     console.log("DIFERENCA = "+dif);
 </script>
 
+
 Iniciante 1008
 <script>
     var A = parseInt(lines[0]);
@@ -71,6 +79,7 @@ Iniciante 1008
     console.log("NUMBER = "+A+"\n"+"SALARY = U$ "+salario)
 </script>
 
+
 Iniciante 1009
 <script>
     var A = String(lines[0]);
@@ -79,6 +88,7 @@ Iniciante 1009
     var salario = parseFloat(B+C*0.15).toFixed(2);
     console.log("TOTAL = R$ "+salario);
 </script>
+
 
 Iniciante 1010
 <script>
@@ -96,12 +106,14 @@ Iniciante 1010
     console.log("VALOR A PAGAR: R$ "+soma1);
 </script>
 
+
 Iniciante 1011
 <script>
     var R = parseInt(lines[0]);
     var volume = ((4.0/3)*3.14159*(R*R*R)).toFixed(3);
     console.log("VOLUME = "+volume)
 </script>
+
 
 Iniciante 1012
 <script>
@@ -117,6 +129,7 @@ Iniciante 1012
     console.log("TRIANGULO: "+calc1+"\n"+"CIRCULO: "+calc2+"\n"+"TRAPEZIO: "+calc3+"\n"+"QUADRADO: "+calc4+"\n"+"RETANGULO: "+calc5);
 </script>
 
+
 Iniciante 1013
 <script>
     // Math.max()  --> Retorna o maior numero dentre os comparados.
@@ -128,6 +141,7 @@ Iniciante 1013
     console.log(`${maior} eh o maior`)
 </script>
 
+
 Iniciante 1014
 <script>
     var A = parseInt(lines[0]);
@@ -135,6 +149,7 @@ Iniciante 1014
     var kml = (A/B).toFixed(3);
     console.log(`${kml} km/l`);
 </script>
+
 
 Iniciante 1015
 <script>
@@ -145,9 +160,24 @@ Iniciante 1015
     var y1 = parseFloat(linha1[1]);
     var x2 = parseFloat(linha2[0]);
     var y2 = parseFloat(linha2[1]);
-    var calc1 = (x2 - x1)*(x2 - x1);
-    var calc2 = (y2 - y1)*(y2 - y1);
-    var calc3 = Number(calc1 + calc2);
-    var raiz = Math.sqrt(calc3).toFixed(4);
+    var calc = ((x2 - x1)**2)+((y2 - y1)**2);
+    var raiz = Math.sqrt(calc).toFixed(4);
     console.log(raiz);
+</script>
+
+
+Iniciante 1016
+<script>
+    var A = parseInt(lines[0]);
+    var dist = A*2;
+    console.log(`${dist} minutos`);
+</script>
+
+
+Iniciante 1017
+<script>
+    var A = parseInt(lines[0]);
+    var B = parseInt(lines[1]);
+    var media = ((A*B)/2).toFixed(3);
+    console.log(media);
 </script>
