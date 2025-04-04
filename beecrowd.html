@@ -95,3 +95,59 @@ Iniciante 1010
     var soma1 = Number((B*C)+(E*F)).toFixed(2);
     console.log("VALOR A PAGAR: R$ "+soma1);
 </script>
+
+Iniciante 1011
+<script>
+    var R = parseInt(lines[0]);
+    var volume = ((4.0/3)*3.14159*(R*R*R)).toFixed(3);
+    console.log("VOLUME = "+volume)
+</script>
+
+Iniciante 1012
+<script>
+    var linha1 = lines[0].split(" ")
+    var A = parseFloat(linha1[0]);
+    var B = parseFloat(linha1[1]);
+    var C = parseFloat(linha1[2]);
+    var calc1 = ((A*C)/2).toFixed(3);
+    var calc2 = ((C*C)*3.14159).toFixed(3);
+    var calc3 = ((Number(A+B)*C)/2).toFixed(3);
+    var calc4 = (B*B).toFixed(3);
+    var calc5 = (A*B).toFixed(3);
+    console.log("TRIANGULO: "+calc1+"\n"+"CIRCULO: "+calc2+"\n"+"TRAPEZIO: "+calc3+"\n"+"QUADRADO: "+calc4+"\n"+"RETANGULO: "+calc5);
+</script>
+
+Iniciante 1013
+<script>
+    // Math.max()  --> Retorna o maior numero dentre os comparados.
+    var linha1 = lines[0].split(" ")
+    var A = parseInt(linha1[0]);
+    var B = parseInt(linha1[1]);
+    var C = parseInt(linha1[2]);
+    var maior = Math.max(A, B, C);
+    console.log(`${maior} eh o maior`)
+</script>
+
+Iniciante 1014
+<script>
+    var A = parseInt(lines[0]);
+    var B = parseFloat(lines[1]);
+    var kml = (A/B).toFixed(3);
+    console.log(`${kml} km/l`);
+</script>
+
+Iniciante 1015
+<script>
+    // x ** y  --> Exponencial.
+    var linha1 = lines[0].split(" ");
+    var linha2 = lines[1].split(" ");
+    var x1 = parseFloat(linha1[0]);
+    var y1 = parseFloat(linha1[1]);
+    var x2 = parseFloat(linha2[0]);
+    var y2 = parseFloat(linha2[1]);
+    var calc1 = (x2 - x1)*(x2 - x1);
+    var calc2 = (y2 - y1)*(y2 - y1);
+    var calc3 = Number(calc1 + calc2);
+    var raiz = Math.sqrt(calc3).toFixed(4);
+    console.log(raiz);
+</script>
