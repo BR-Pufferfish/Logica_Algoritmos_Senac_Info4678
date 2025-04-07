@@ -202,10 +202,12 @@ Iniciante 1019
 <script>
     //556 140153
     var A = parseInt(lines[0]);
-    var H = Math.trunc(A/3600);
-    var M = Math.trunc((A/3600)-H)*60;
-    var S = Math.trunc(A/60);
-    var Seg = Math.trunc(((A/60)-Seg)*60);
+    var Hor = A/3600;
+    var H = Math.trunc(Hor);
+    var Min = ((Hor)-H)*60;
+    var M = Math.trunc(Min);
+    var Seg = ((((Hor)-H)*60)-M)*60;
+    var S = Math.trunc(Seg);
     console.log(`${H}:${M}:${S}`);
-</script>
+</script> 
 
