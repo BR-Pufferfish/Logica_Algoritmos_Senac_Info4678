@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 23</title>
+</head>
+<body>
+    <p>23. Numa promoção exclusiva para o Dia da Mulher, uma loja quer dar descontos para todos, mas especialmente para mulheres. Faça um programa que leia nome, sexo e o valor das compras do cliente e calcule o preço com desconto. Sabendo que: - Homens ganham 5% de desconto - Mulheres ganham 13% de desconto</p>
+    <br>
+    <p>Digite um número:</p>
+    <br>
+    <input type="number" id="typedNumb">
+    <button onclick="showCalcNum()">Verificar</button>
+
+    <script>
+        function showCalcNum(){
+            var typedNumb = document.getElementById("typedNumb").value;
+            var typedDoub = Number(typedNumb) *2;
+            var typedTerc = (Number(typedNumb) /3).toFixed(3);
+            alert(`Tendo ${typedNumb}, seu dobro é ${typedDoub} e sua terça parte é ${typedTerc}`)
+        }
+    </script>
+</body>
+</html>

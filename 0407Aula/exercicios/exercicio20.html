@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 20</title>
+</head>
+<body>
+    <p>20. Desenvolva um programa que leia um número inteiro e mostre se ele é PAR ou ÍMPAR.</p>
+    <p>Insira um número:</p>
+    <input type="number" id="number_st">
+    <br>
+    <p>Insira outro número:</p>
+    <input type="number" id="number_nd">
+    <button onclick="showCombinedNumbers()">Somar Números</button>
+
+    <script>
+        function showCombinedNumbers(){
+            var numb_st = document.getElementById("number_st").value;
+            var numb_nd = document.getElementById("number_nd").value;
+            var numbSoma = Number(numb_st) + Number(numb_nd);
+            alert(`A soma entre ${numb_st} e ${numb_nd} é ${numbSoma}`)
+        }
+    </script>
+</body>
+</html>

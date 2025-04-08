@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Qual a velocidade do carro?</p>
+    <input type="number" id="carSpeed">
+    <br>
+    <button onclick="showSpeed()">Calcular</button>
+
+    <script>
+        function showSpeed(){
+            var carSpeed = Number(document.getElementById("carSpeed").value);
+
+            if(carSpeed > 80){
+                carSpeedOverLimit = (carSpeed - 80)*5;
+                alert(`Você foi multado em R$${carSpeedOverLimit}`);
+            }else{
+                alert("Parabéns, estás dentro do limite da via.");
+            }
+        }
+    </script>
+</body>
+</html>
