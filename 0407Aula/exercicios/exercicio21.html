@@ -8,16 +8,13 @@
 <body>
     <p>21. Faça um algoritmo que leia um determinado ano e mostre se ele é ou não BISSEXTO.</p>
     <br>
-    <p>Qual foi a sua nota na primeira prova?</p>
-    <input type="number" id="testGrade_01">
-    <br>
-    <p>Qual foi a sua nota na segunda prova?</p>
-    <input type="number" id="testGrade_02">
-    <br>
-    <button onclick="showAverage()">Calcular Média</button>
+    <p></p>
+    <input type="number" id="year">
+    <button onclick="showLeapYear()">Calcular Média</button>
 
     <script>
-        function showAverage(){
+        // fazer um split no ano (2024 -> 20 24) para verificar as casas
+        function showLeapYear(){
             var test01 = document.getElementById("testGrade_01").value;
             var test02 = document.getElementById("testGrade_02").value;
             var average = (Number(test01) + Number(test02)) / 2;

@@ -8,19 +8,19 @@
 <body>
     <p>20. Desenvolva um programa que leia um número inteiro e mostre se ele é PAR ou ÍMPAR.</p>
     <p>Insira um número:</p>
-    <input type="number" id="number_st">
-    <br>
-    <p>Insira outro número:</p>
-    <input type="number" id="number_nd">
-    <button onclick="showCombinedNumbers()">Somar Números</button>
+    <input placeholder="Ex: 1" type="number" id="number">
+    <button onclick="showOddEven()">Verificar</button>
 
     <script>
-        function showCombinedNumbers(){
-            var numb_st = document.getElementById("number_st").value;
-            var numb_nd = document.getElementById("number_nd").value;
-            var numbSoma = Number(numb_st) + Number(numb_nd);
-            alert(`A soma entre ${numb_st} e ${numb_nd} é ${numbSoma}`)
-        }
+        function showOddEven(){
+            var number = Number(document.getElementById("number").value);
+            var calc = number % 2;
+            if(calc == 0){
+                alert(`O número ${number} é Par`);
+            }else{
+                alert(`O número ${number} é Ímpar`);
+            }S
+            }
     </script>
 </body>
 </html>
