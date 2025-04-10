@@ -8,17 +8,27 @@
 <body>
     <p>23. Numa promoção exclusiva para o Dia da Mulher, uma loja quer dar descontos para todos, mas especialmente para mulheres. Faça um programa que leia nome, sexo e o valor das compras do cliente e calcule o preço com desconto. Sabendo que: - Homens ganham 5% de desconto - Mulheres ganham 13% de desconto</p>
     <br>
-    <p>Digite um número:</p>
-    <br>
-    <input type="number" id="typedNumb">
-    <button onclick="showCalcNum()">Verificar</button>
+    <p>Seu nome:</p>
+    <input placeholder="Seu Nome" type="text" id="name">
+    <p>Sexo:</p>
+    <input placeholder="Homem/Mulher" type="text" id="sex">
+    <p>Valor das Compras:</p>
+    <input placeholder="1000,00" type="number" id="cost">
+    <button onclick="showPromo()">Aplicar Desconto</button>
 
     <script>
-        function showCalcNum(){
-            var typedNumb = document.getElementById("typedNumb").value;
-            var typedDoub = Number(typedNumb) *2;
-            var typedTerc = (Number(typedNumb) /3).toFixed(3);
-            alert(`Tendo ${typedNumb}, seu dobro é ${typedDoub} e sua terça parte é ${typedTerc}`)
+        function showPromo(){
+            let name = document.getElementById("name").value;
+            let sex = document.getElementById("sex").value;
+            let sexLow = sex.toLowerCase();
+            let cost = Number(document.getElementById("cost").value);
+            if(sexLow=="homem"){
+                let costH = (cost*0.95).toFixed(2);
+                alert(`${name}, suas compras sairam por R$${costH} após o desconto de 5%.`);
+            }else{
+                let costM = (cost*0.87).toFixed(2);
+                alert(`${name}, suas compras sairam por R$${costM} após o desconto de 13%.`)
+            }
         }
     </script>
 </body>

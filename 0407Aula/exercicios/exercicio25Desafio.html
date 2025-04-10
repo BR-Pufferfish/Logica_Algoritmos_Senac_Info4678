@@ -6,20 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Qual a velocidade do carro?</p>
-    <input type = number id = "carSpeed">
+    <p>25. [DESAFIO] Crie um programa que leia o tamanho de três segmentos de reta. Analise seus comprimentos e diga se é possível formar um triângulo com essas retas. Matematicamente, para três segmentos formarem um triângulo, o comprimento de cada lado deve ser menor que a soma dos outros dois.</p>
+    <p>Comprimento da reta 1</p>
+    <input type = number id = "line1">
+    <p>Comprimento da reta 2</p>
+    <input type = number id = "line2">
+    <p>Comprimento da reta 3</p>
+    <input type = number id = "line3">
     <br>
-    <button onclick="showSpeed()">Calcular</button>
+    <button onclick="showTriangle()">Calcular</button>
 
     <script>
-        function showSpeed(){
-            var carSpeed = Number(document.getElementById("carSpeed").value);
+        function showTriangle(){
+            let A = Number(document.getElementById("line1").value);
+            let B = Number(document.getElementById("line2").value);
+            let C = Number(document.getElementById("line3").value);
 
-            if(carSpeed > 80){
-                carSpeedOverLimit = (carSpeed - 80)*5;
-                alert(`Você foi multado em R$${carSpeedOverLimit}`);
+            //&& significa "E(and)" --> "se x E(and) y"
+            if(A+B>C && B+C>A && C+A>B){
+                alert("Com estas retas, podemos formar um triângulo");
             }else{
-                alert("Parabéns, estás dentro do limite da via.")
+                alert("Não se pode fazer um triângulo com estas retas");
             }
         }
     </script>

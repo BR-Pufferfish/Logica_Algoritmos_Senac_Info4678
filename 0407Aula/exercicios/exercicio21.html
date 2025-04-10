@@ -10,15 +10,23 @@
     <br>
     <p></p>
     <input type="number" id="year">
-    <button onclick="showLeapYear()">Calcular Média</button>
+    <button onclick="showLeapYear()">Calcular Ano</button>
 
     <script>
-        // fazer um split no ano (2024 -> 20 24) para verificar as casas
-        function showLeapYear(){
-            var test01 = document.getElementById("testGrade_01").value;
-            var test02 = document.getElementById("testGrade_02").value;
-            var average = (Number(test01) + Number(test02)) / 2;
-            alert(`A média entre ${test01} e ${test02} é de ${average}`);
+        function showLeapYear()
+        {
+            let year = Number(document.getElementById("year").value);
+
+            //&& significa "E(and)" --> "se x E(and) y"
+            if(year%4==0){
+            alert(`${year} é um ano Bissexto`);
+            }else if(year%100==0 && year%400==0){
+                alert(`${year} é um ano Bissexto`);
+            }else if(year%100==0 && year%400!=0){
+                alert(`${year} NÃO é um ano Bissexto`);
+            }else{
+                alert(`${year} NÃO é um ano Bissexto`);
+            }
         }
     </script>
 </body>

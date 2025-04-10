@@ -7,21 +7,19 @@
 </head>
 <body>
     <p>24. Faça um algoritmo que pergunte a distância que um passageiro deseja percorrer em Km. Calcule o preço da passagem, cobrando R$0.50 por Km para viagens até 200Km e R$0.45 para viagens mais longas.</p>
-    <br>
-    <p>Digite um número (em metros):</p>
-    <br>
-    <input type="number" id="metros">
-    <button onclick="showConversion()">Converter</button>
+    <p>Qual a distância do seu destino?</p>
+    <input placeholder="Quilômetros" type="number" id="dist">
+    <button onclick="showConversion()">Calcular</button>
     <script>
         function showConversion(){
-            var distMetro = document.getElementById("metros").value;
-            var distMm = Number(distMetro) *1000;
-            var distCm = Number(distMetro) *100;
-            var distDm = Number(distMetro) *10;
-            var distDam = Number(distMetro) *0.1;
-            var distHm = Number(distMetro) *0.01;
-            var distKm = Number(distMetro) *0.001;
-            alert(`O comprimento de ${distMetro}m é igual a: ${distMm}mm, ${distCm}cm, ${distDm}dm, ${distDam}dam, ${distHm}hm e ${distKm}km.`)
+            let dist = Number(document.getElementById("dist").value);
+            if(dist<=200){
+                let dist50 = (dist*0.5).toFixed(2);
+                alert(`O custo da sua viagem é de R$${dist50}`);
+            }else{
+                let dist45 = (dist*0.45).toFixed(2);
+                alert(`O custo da sua viagem é de R$${dist45}`);
+            }
         }
     </script>
 </body>
