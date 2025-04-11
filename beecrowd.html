@@ -216,26 +216,89 @@ Iniciante 1019
 
 Iniciante 1020
 <script>
-    let = lines[0];
-    console.log(``);
+    let A = parseInt(lines[0]);
+    let ano = Math.trunc(A/365);
+    A = A%365;
+    let mes = Math.trunc(A/30);
+    A = A%30;
+    let dia = Math.trunc(A);
+    console.log(`${ano} ano(s)\n${mes} mes(es)\n${dia} dia(s)`);
 </script>
 
 Iniciante 1021
 <script>
-    let = lines[0];
-    console.log(``);
+let A = parseFloat(lines[0]);
+let notaCem = Math.trunc(A/100);
+A = A%100;
+let notaCinquenta = Math.trunc(A/50);
+A = A%50;
+let notaVinte = Math.trunc(A/20);
+A = A%20;
+let notaDez = Math.trunc(A/10);
+A = A%10;
+let notaCinco = Math.trunc(A/5);
+A = A%5;
+let notaDois = Math.trunc(A/2);
+A = A%2;
+let moedaReal = Math.trunc(A);
+let B = Math.round((A - moedaReal)*100);
+let moedaCinquenta = Math.trunc(B/50);
+B = B%50;
+let moedaVintecinco = Math.trunc(B/25);
+B = B%25;
+let moedaDez = Math.trunc(B/10);
+B = B%10;
+let moedaCinco = Math.trunc(B/5);
+B = B%5;
+let moedaUm = Math.trunc(B);
+console.log("NOTAS:");
+console.log(`${notaCem} nota(s) de R$ 100.00`);
+console.log(`${notaCinquenta} nota(s) de R$ 50.00`);
+console.log(`${notaVinte} nota(s) de R$ 20.00`);
+console.log(`${notaDez} nota(s) de R$ 10.00`);
+console.log(`${notaCinco} nota(s) de R$ 5.00`);
+console.log(`${notaDois} nota(s) de R$ 2.00`);
+console.log("MOEDAS:");
+console.log(`${moedaReal} moeda(s) de R$ 1.00`);
+console.log(`${moedaCinquenta} moeda(s) de R$ 0.50`);
+console.log(`${moedaVintecinco} moeda(s) de R$ 0.25`);
+console.log(`${moedaDez} moeda(s) de R$ 0.10`);
+console.log(`${moedaCinco} moeda(s) de R$ 0.05`);
+console.log(`${moedaUm} moeda(s) de R$ 0.01`);
 </script>
 
-Iniciante 1022
+Iniciante 1035
 <script>
-    let = lines[0];
-    console.log(``);
+let valor = lines[0].split(" ");
+let A = parseInt(valor[0]);
+let B = parseInt(valor[1]);
+let C = parseInt(valor[2]);
+let D = parseInt(valor[3]);
+if(B>C && D>A && (C+D)>(A+B) && A%2===0){
+	console.log("Valores aceitos");
+}else{
+	console.log("Valores nao aceitos");
+}
 </script>
 
-Iniciante 1023
+Iniciante 1036
 <script>
-    let = lines[0];
-    console.log(``);
+let valor = lines[0].split(" ");
+let A = parseFloat(valor[0]);
+let B = parseFloat(valor[1]);
+let C = parseFloat(valor[2]);
+let delta = (B*B) - (4*A*C);
+if(delta<0 || A===0){
+	console.log("Impossivel calcular");
+}else{
+	let raizDelta = Math.sqrt(delta);
+	let div = A*2;
+	let raiz1 = (B*(-1)+(raizDelta));
+	raiz1 = (raiz1/div).toFixed(5);
+	let raiz2 = (B*(-1)-(raizDelta));
+	raiz2 = (raiz2/div).toFixed(5);
+	console.log(`R1 = ${raiz1}\nR2 = ${raiz2}`);
+}
 </script>
 
 Iniciante 1024
