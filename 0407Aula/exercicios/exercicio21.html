@@ -18,12 +18,10 @@
             let year = Number(document.getElementById("year").value);
 
             //&& significa "E(and)" --> "se x E(and) y"
-            if(year%4==0){
-            alert(`${year} é um ano Bissexto`);
-            }else if(year%100==0 && year%400==0){
+            if(year%400===0){
                 alert(`${year} é um ano Bissexto`);
-            }else if(year%100==0 && year%400!=0){
-                alert(`${year} NÃO é um ano Bissexto`);
+            }else if(year%4===0 && year%100!=0){
+                alert(`${year} é um ano Bissexto`);
             }else{
                 alert(`${year} NÃO é um ano Bissexto`);
             }
