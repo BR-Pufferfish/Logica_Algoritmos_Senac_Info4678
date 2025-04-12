@@ -214,6 +214,7 @@ Iniciante 1019
     console.log(`${H}:${M}:${S}`);
 </script> 
 
+
 Iniciante 1020
 <script>
     let A = parseInt(lines[0]);
@@ -224,6 +225,7 @@ Iniciante 1020
     let dia = Math.trunc(A);
     console.log(`${ano} ano(s)\n${mes} mes(es)\n${dia} dia(s)`);
 </script>
+
 
 Iniciante 1021
 <script>
@@ -267,6 +269,7 @@ console.log(`${moedaCinco} moeda(s) de R$ 0.05`);
 console.log(`${moedaUm} moeda(s) de R$ 0.01`);
 </script>
 
+
 Iniciante 1035
 <script>
 let valor = lines[0].split(" ");
@@ -280,6 +283,7 @@ if(B>C && D>A && (C+D)>(A+B) && A%2===0){
 	console.log("Valores nao aceitos");
 }
 </script>
+
 
 Iniciante 1036
 <script>
@@ -301,17 +305,49 @@ if(delta<0 || A===0){
 }
 </script>
 
-Iniciante 1024
+
+Iniciante 1038
 <script>
-    let = lines[0];
-    console.log(``);
+    let linha1 = lines[0].split(" ");
+    let A = parseInt(linha1[0]);
+    let B = parseInt(linha1[1]);
+    const teste = {0:0, 1:4, 2:4.5, 3:5, 4:2, 5:1.5};
+    let calc = ((Number(teste[A]))*B).toFixed(2);
+    console.log(`Total: R$ ${calc}`);
 </script>
 
-Iniciante 1025
+
+Iniciante 1040
 <script>
-    let = lines[0];
-    console.log(``);
+    let linha1 = parseFloat(lines[0]);
+    let exame = parseFloat(lines[1]);
+    let A = parseFloat(linha1[0]);
+    let B = parseFloat(linha1[1]);
+    let C = parseFloat(linha1[2]);
+    let D = parseFloat(linha1[3]);
+    let media = Number(((A*2)+(B*3)+(C*4)+(D*1)/10)).toFixed(1);
+    let mediaExame = Number(((media+exame)/2)).toFixed(1);
+    if(media >= 7){
+        console.log(`Media: ${media}`);
+        console.log("Aluno aprovado.");
+    }else if(5<= media <=6.9 && 5<mediaExame<10){
+        console.log(`Media: ${media}`);
+        console.log("Aluno em exame.");
+        console.log(`Nota do exame: ${exame}`);
+        console.log("Aluno aprovado");
+        console.log(`Media final: ${mediaExame}`);
+    }else if(5<= media <=6.9 && mediaExame<5){
+            console.log(`Media: ${media}`);
+            console.log("Aluno em exame.");
+            console.log(`Nota do exame: ${exame}`);
+            console.log("Aluno reprovado.");
+            console.log(`Media final: ${mediaExame}`);
+    }else if(media < 5){
+        console.log(`Media: ${media}`);
+        console.log("Aluno reprovado.");
+    }
 </script>
+
 
 Iniciante 1026
 <script>
