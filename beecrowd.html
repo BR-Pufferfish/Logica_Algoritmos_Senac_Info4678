@@ -382,10 +382,19 @@ Iniciante 1042
     let C = Number(((aa+bb+cc)-A)-B);
 </script>
 
-Iniciante 1028
+Iniciante 1043
 <script>
-    let = lines[0];
-    console.log(``);
+let reta = lines[0].split(" ");
+let A = Number(parseFloat(reta[0]));
+let B = Number(parseFloat(reta[1]));
+let C = Number(parseFloat(reta[2]));
+if (A+B>C || B+C>A || A+C>B){
+    let perim = Number(A+B+C).toFixed(1);
+	console.log(`Perimetro = ${perim}`);
+}else{
+    let area = Number(((A+B)*C)/2).toFixed(1);
+	console.log(`Area = ${area}`);
+}
 </script>
 
 Iniciante 1029
