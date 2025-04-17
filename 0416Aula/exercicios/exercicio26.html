@@ -12,18 +12,23 @@
         - Não existe valor maior, os dois são iguais 
     </p>
     <br>
-    <p>Qual a velocidade do carro?</p>
-    <input type="number" id="carSpeed">
+    <p>Primeiro Número</p>
+    <input type="number" id="numOne">
+    <p>Segundo Número</p>
+    <input type="number" id="numTwo">
     <br>
-    <button onclick="showSpeed()">Calcular</button>
+    <button onclick="calcNum()">Calcular</button>
 
     <script>
-        function showSpeed(){
-            var carSpeed = Number(document.getElementById("carSpeed").value);
-
-            if(carSpeed > 80){
-                carSpeedOverLimit = (carSpeed - 80)*5;
-                alert(`Você foi multado em R$${carSpeedOverLimit}`);
+        function calcNum(){
+            let A = Number(document.getElementById("numOne").value);
+            let B = Number(document.getElementById("numTwo").value);
+            if(A>B){
+                alert("O primeiro valor é o maior");
+            }else if(A<B){
+                alert("O segundo valor é o maior");
+            }else{
+                alert("Não existe valor maior, os dois são iguais"); 
             }
         }
     </script>
