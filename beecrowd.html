@@ -397,14 +397,30 @@ if (A+B>C || B+C>A || A+C>B){
 }
 </script>
 
-Iniciante 1029
+Iniciante 1044
 <script>
-    let = lines[0];
-    console.log(``);
+let valor = lines[0].split(" ");
+let A = parseInt(valor[0]);
+let B = parseInt(valor[1]);
+if (B%A===0 || A%B===0){
+	console.log("Sao Multiplos");
+}else{
+	console.log("Nao sao Multiplos");
+}
 </script>
 
-Iniciante 1030
+Iniciante 1046
 <script>
-    let = lines[0];
-    console.log(``);
+let valor = lines[0].split(" ");
+let A = parseInt(valor[0]);
+let B = parseInt(valor[1]);
+if (A>B){
+	let outroDia = Number((24-A)+B);
+	console.log(O JOGO DUROU ${outroDia} HORA(S));
+}else if(A===B){
+	console.log("O JOGO DUROU 24 HORA(S)");
+}else{
+	let mesmoDia = Number(B-A);
+	console.log(O JOGO DUROU ${mesmoDia} HORA(S));
+}
 </script>
