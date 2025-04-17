@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 22</title>
+</head>
+<body>
+    <p>31. [DESAFIO] Crie um jogo de JoKenPo (Pedra-Papel-Tesoura) </p>
+    <br>
+    <p>Digite sua idade:</p>
+    <input type="number" id="Age">
+    <button onclick="showMilitaryAge()">Verificar</button>
+
+    <script>
+        function showMilitaryAge(){
+            let age = Number(document.getElementById("Age").value);
+            let ageDif = age-18;
+            let ageDif2 = Math.abs(ageDif)
+            if(age<18){
+                alert(`Você ainda não pode se alistar, falta(m) ${ageDif} anos.`);
+            }else if(age===18){
+                alert(`Você já tem idade para o alistamento. Deve realizar o alistamento este ano.`);
+            }else{
+                alert(`Você está ${ageDif2} ano(s) atrasado com seu alistamento`);
+            }
+        }
+    </script>
+</body>
+</html>

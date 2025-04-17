@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 21</title>
+</head>
+<body>
+    <p>30. [DESAFIO] Refaça o algoritmo 25, acrescentando o recurso de mostrar que tipo de triângulo será formado: 
+        - EQUILÁTERO: todos os lados iguais 
+        - ISÓSCELES: dois lados iguais 
+        - ESCALENO: todos os lados diferentes 
+    </p>
+    <br>
+    <p></p>
+    <input type="number" id="year">
+    <button onclick="showLeapYear()">Calcular Ano</button>
+
+    <script>
+        function showLeapYear()
+        {
+            let year = Number(document.getElementById("year").value);
+
+            //&& significa "E(and)" --> "se x E(and) y"
+            if(year%400===0){
+                alert(`${year} é um ano Bissexto`);
+            }else if(year%4===0 && year%100!=0){
+                alert(`${year} é um ano Bissexto`);
+            }else{
+                alert(`${year} NÃO é um ano Bissexto`);
+            }
+        }
+    </script>
+</body>
+</html>

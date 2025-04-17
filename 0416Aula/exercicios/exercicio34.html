@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>34. O Índice de Massa Corpórea (IMC) é um valor calculado baseado na altura e no peso de uma pessoa. De acordo com o valor do IMC, podemos classificar o indivíduo dentro de certas faixas. 
+        - abaixo de 18.5: Abaixo do peso 
+        - entre 18.5 e 25: Peso ideal 
+        - entre 25 e 30: Sobrepeso
+        - entre 30 e 40: Obesidade 
+        - acima de 40: Obseidade mórbida Obs: O IMC é calculado pela expressão peso/altura² (peso dividido pelo quadrado da altura) 
+    </p>
+    <p>Comprimento da reta 1</p>
+    <input type = number id = "line1">
+    <p>Comprimento da reta 2</p>
+    <input type = number id = "line2">
+    <p>Comprimento da reta 3</p>
+    <input type = number id = "line3">
+    <br>
+    <button onclick="showTriangle()">Calcular</button>
+
+    <script>
+        function showTriangle(){
+            let A = Number(document.getElementById("line1").value);
+            let B = Number(document.getElementById("line2").value);
+            let C = Number(document.getElementById("line3").value);
+
+            //&& significa "E(and)" --> "se x E(and) y"
+            if(A+B>C && B+C>A && C+A>B){
+                alert("Com estas retas, podemos formar um triângulo");
+            }else{
+                alert("Não se pode fazer um triângulo com estas retas");
+            }
+        }
+    </script>
+</body>
+</html>

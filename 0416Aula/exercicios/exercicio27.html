@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 18</title>
+</head>
+<body>
+    <p>27. Crie um programa que leia duas notas de um aluno e calcule a sua média, mostrando uma mensagem no final, de acordo com a média atingida: 
+        - Média até 4.9: REPROVADO 
+        - Média entre 5.0 e 6.9: RECUPERAÇÃO 
+        - Média 7.0 ou superior: APROVADO 
+    </p>
+    <br>
+    <p>Qual o ano do seu nascimento?</p>
+    <input placeholder=Ex:2001 type="number" id="userBirthyear">
+    <br>
+    <button onclick="showUserVota()">Verificar</button>
+
+    <script>
+        function showUserVota(){
+        var userBorn = Number(document.getElementById("userBirthyear").value);
+        var userAge = 2025-userBorn;
+        if(userAge>18){
+            alert(`Tendo ${userAge} anos, você já pode votar`);
+        }else{
+            alert("Você ainda não pode votar.");
+        }
+    }
+    </script>
+
+
+
+</body>
+</html>

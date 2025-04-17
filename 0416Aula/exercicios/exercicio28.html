@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 19</title>
+</head>
+<body>
+    <p>28. Faça um programa que leia a largura e o comprimento de um terreno retangular, calculando e mostrando a sua área em m². O programa também devemostrar a classificação desse terreno, de acordo com a lista abaixo: 
+        - Abaixo de 100m² = TERRENO POPULAR 
+        - Entre 100m² e 500m² = TERRENO MASTER 
+        - Acima de 500m² = TERRENO VIP 
+    </p>
+    <br>
+    <p>Qual seu nome?</p>
+    <input placeholder="Nome" type="text" id="userName">
+    <br>
+    <p>Qual foi a sua nota na primeira prova?</p>
+    <input placeholder="1ª Nota" type="number" id="testGrade01">
+    <br>
+    <p>Qual foi a sua nota na segunda prova?</p>
+    <input placeholder="2ª Nota" type="number" id="testGrade02">
+    <br>
+    <button onclick="showAverage()">Calcular Média</button>
+
+    <script>
+        function showAverage(){
+            var userName = document.getElementById("userName").value;
+            var test01 = Number(document.getElementById("testGrade01").value);
+            var test02 = Number(document.getElementById("testGrade02").value);
+            var average = (test01 + test02)/ 2;
+            if(average>=7.0){
+                alert(`${userName}, a sua média foi ${average} e seu aproveitamento foi BOM`)
+
+            }else{
+                alert(`${userName}, a sua média foi ${average} e seu aproveitamento foi RUIM`)
+            }
+        }
+    </script>
+</body>
+</html>

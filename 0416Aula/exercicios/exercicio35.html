@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>35. Uma empresa de aluguel de carros precisa cobrar pelos seus serviços. O aluguel de um carro custa R$90 por dia para carro popular e R$150 por dia para carro de luxo. Além disso, o cliente paga por Km percorrido. Faça um programa que leia o tipo de carro alugado (popular ou luxo), quantos dias de aluguel e quantos Km foram percorridos. No final mostre o preço a ser pago de acordo com a tabela a seguir: 
+        - Carros populares (aluguel de R$90 por dia) 
+        - Até 100Km percorridos: R$0,20 por Km 
+        - Acima de 100Km percorridos: R$0,10 por Km 
+        - Carros de luxo (aluguel de R$150 por dia) 
+        - Até 200Km percorridos: R$0,30 por Km 
+        - Acima de 200Km percorridos: R$0,25 por Km 
+    </p>
+    <p>Comprimento da reta 1</p>
+    <input type = number id = "line1">
+    <p>Comprimento da reta 2</p>
+    <input type = number id = "line2">
+    <p>Comprimento da reta 3</p>
+    <input type = number id = "line3">
+    <br>
+    <button onclick="showTriangle()">Calcular</button>
+
+    <script>
+        function showTriangle(){
+            let A = Number(document.getElementById("line1").value);
+            let B = Number(document.getElementById("line2").value);
+            let C = Number(document.getElementById("line3").value);
+
+            //&& significa "E(and)" --> "se x E(and) y"
+            if(A+B>C && B+C>A && C+A>B){
+                alert("Com estas retas, podemos formar um triângulo");
+            }else{
+                alert("Não se pode fazer um triângulo com estas retas");
+            }
+        }
+    </script>
+</body>
+</html>
