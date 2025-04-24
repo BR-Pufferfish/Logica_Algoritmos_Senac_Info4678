@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 18</title>
+    <title>Exercício 27</title>
 </head>
 <body>
     <p>27. Crie um programa que leia duas notas de um aluno e calcule a sua média, mostrando uma mensagem no final, de acordo com a média atingida: 
@@ -12,19 +12,24 @@
         - Média 7.0 ou superior: APROVADO 
     </p>
     <br>
-    <p>Qual o ano do seu nascimento?</p>
-    <input placeholder=Ex:2001 type="number" id="userBirthyear">
+    <p>Qual sua primeira nota?</p>
+    <input placeholder="1a Nota" type="number" id="ratingA">
+    <p>Qual sua segunda nota?</p>
+    <input placeholder="2a Nota" type="number" id="ratingB">
     <br>
-    <button onclick="showUserVota()">Verificar</button>
+    <button onclick="showUserAvrg()">Verificar</button>
 
     <script>
-        function showUserVota(){
-        var userBorn = Number(document.getElementById("userBirthyear").value);
-        var userAge = 2025-userBorn;
-        if(userAge>18){
-            alert(`Tendo ${userAge} anos, você já pode votar`);
+        function showUserAvrg(){
+        let notaA = Number(document.getElementById("ratingA").value);
+        let notaB = Number(document.getElementById("ratingB").value);
+        let avrg = Number(notaA+notaB)/2;
+        if(avrg <= 4.9){
+            alert(`Sua média foi ${avrg}, com isso você foi REPROVADO`);
+        }else if(4.9 < avrg < 7.0){
+            alert(`Sua média foi ${avrg}, com isso você ficou em RECUPERAÇÃO`);
         }else{
-            alert("Você ainda não pode votar.");
+            alert(`Sua média foi ${avrg}, com isso você foi APROVADO`);
         }
     }
     </script>

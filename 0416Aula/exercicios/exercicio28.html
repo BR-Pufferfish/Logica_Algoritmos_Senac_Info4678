@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 19</title>
+    <title>Exercício 28</title>
 </head>
 <body>
     <p>28. Faça um programa que leia a largura e o comprimento de um terreno retangular, calculando e mostrando a sua área em m². O programa também devemostrar a classificação desse terreno, de acordo com a lista abaixo: 
@@ -12,28 +12,25 @@
         - Acima de 500m² = TERRENO VIP 
     </p>
     <br>
-    <p>Qual seu nome?</p>
-    <input placeholder="Nome" type="text" id="userName">
-    <br>
-    <p>Qual foi a sua nota na primeira prova?</p>
-    <input placeholder="1ª Nota" type="number" id="testGrade01">
-    <br>
-    <p>Qual foi a sua nota na segunda prova?</p>
-    <input placeholder="2ª Nota" type="number" id="testGrade02">
-    <br>
-    <button onclick="showAverage()">Calcular Média</button>
+    <p>Qual a largura do terreno?</p>
+    <input placeholder="Largura" type="number" id="width">
+    <p>Qual o comprimento do terreno?</p>
+    <input placeholder="Comprimento" type="number" id="lenght">
+
+    <button onclick="showArea()">Calcular</button>
 
     <script>
-        function showAverage(){
-            var userName = document.getElementById("userName").value;
-            var test01 = Number(document.getElementById("testGrade01").value);
-            var test02 = Number(document.getElementById("testGrade02").value);
-            var average = (test01 + test02)/ 2;
-            if(average>=7.0){
-                alert(`${userName}, a sua média foi ${average} e seu aproveitamento foi BOM`)
+        function showArea(){
+            let width = Number(document.getElementById("width").value);
+            let lenght = Number(document.getElementById("lenght").value);
+            let area = Number(width*lenght);
+            if(area < 100){
+                alert(`Tendo ${area}m², seu terreno é um TERRENO POPULAR`);
 
+            }else if(area>100 && area<500){
+                alert(`Tendo ${area}m², seu terreno é um TERRENO MASTER`);
             }else{
-                alert(`${userName}, a sua média foi ${average} e seu aproveitamento foi RUIM`)
+                alert(`Tendo ${area}m², seu terreno é um TERRENO VIP`);
             }
         }
     </script>

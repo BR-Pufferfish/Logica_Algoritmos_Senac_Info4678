@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 22</title>
+    <title>Exercício 31</title>
 </head>
 <body>
     <p>31. [DESAFIO] Crie um jogo de JoKenPo (Pedra-Papel-Tesoura) </p>
     <br>
-    <p>Digite sua idade:</p>
-    <input type="number" id="Age">
-    <button onclick="showMilitaryAge()">Verificar</button>
+    <button onclick="showStone()">Pedra</button>
+    <button onclick="showPaper()">Papel</button>
+    <button onclick="showScizor()">Tesoura</button>
 
     <script>
-        function showMilitaryAge(){
-            let age = Number(document.getElementById("Age").value);
-            let ageDif = age-18;
-            let ageDif2 = Math.abs(ageDif)
-            if(age<18){
-                alert(`Você ainda não pode se alistar, falta(m) ${ageDif} anos.`);
-            }else if(age===18){
-                alert(`Você já tem idade para o alistamento. Deve realizar o alistamento este ano.`);
-            }else{
-                alert(`Você está ${ageDif2} ano(s) atrasado com seu alistamento`);
-            }
+        function showStone(){
+            alert(`Eu escolho PAPEL... Ha! Eu ganhei...`);
+        }
+        function showPaper(){
+            alert(`Eu escolho Tesoura... Ha! Eu ganhei...`);
+        }
+        function showScizor(){
+            alert(`Eu escolho Pedra... Ha! Eu ganhei...`);
         }
     </script>
 </body>
