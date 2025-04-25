@@ -13,8 +13,9 @@
 
     <script>
         function showGuess(){
+            //Caso eu queira guardar o resultado na 1 geração, basta colocar a var fora da função.
             let guess = Number(document.getElementById("guess").value);
-            let number = Math.trunc(Math.random(6)*5)
+            let number = Math.trunc(Math.random()*5)
             if(guess===number){
                 alert(`Parabéns, você acertou! O número era ${number}`);
             }else{

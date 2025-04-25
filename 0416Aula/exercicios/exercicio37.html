@@ -14,26 +14,39 @@
         - de 20 até 30 anos de empresa: +13% 
         - mais de 30 anos de empresa: +25%
     </p>
-    <p>Comprimento da reta 1</p>
-    <input type = number id = "line1">
-    <p>Comprimento da reta 2</p>
-    <input type = number id = "line2">
-    <p>Comprimento da reta 3</p>
-    <input type = number id = "line3">
+    <p>Seu salário</p>
+    <input type = "number" id = "wage">
+    <p>Gênero</p>
+    <input type = "text" id = "gender">
+    <p>Anos trabalhados</p>
+    <input type = "number" id = "year">
     <br>
-    <button onclick="showTriangle()">Calcular</button>
+    <button onclick="showWageBonus()">Calcular Reajuste</button>
 
     <script>
-        function showTriangle(){
-            let A = Number(document.getElementById("line1").value);
-            let B = Number(document.getElementById("line2").value);
-            let C = Number(document.getElementById("line3").value);
+        function showWageBonus(){
+            let wage = parseFloat(document.getElementById("wage").value);
+            let gender = (document.getElementById("gender").value).toLowerCase();
+            let year = Number(document.getElementById("year").value);
+            if(gender==="mulher" && (year>0 && year<=15)){
+                let wage = (wage*1.05).toFixed(2);
+                alert(`Seu novo salário é R$${wage}, após o aumento de 5%`);
+            }else if(gender==="mulher" && (year>15 && year<=20)){
+                let wage = (wage*1.12).toFixed(2);
+                alert(`Seu novo salário é R$${wage}, após o aumento de 12%`);
+            }else if(gender==="mulher" && year>20){
+                let wage = (wage*1.23).toFixed(2);
+                alert(`Seu novo salário é R$${wage}, após o aumento de 23%`);
 
-            //&& significa "E(and)" --> "se x E(and) y"
-            if(A+B>C && B+C>A && C+A>B){
-                alert("Com estas retas, podemos formar um triângulo");
-            }else{
-                alert("Não se pode fazer um triângulo com estas retas");
+            }else if(gender==="homem" && year<=20){
+                let wage = (wage*1.03).toFixed(2);
+                alert(`Seu novo salário é R$${wage}, após o aumento de 3%`);
+            }else if(gender==="homem" && (year>20 && year<=30)){
+                let wage = (wage*1.13).toFixed(2);
+                alert(`Seu novo salário é R$${wage}, após o aumento de 13%`);
+            }else if(gender==="homem" && year>30){
+                let wage = (wage*1.25).toFixed(2);
+                alert(`Seu novo salário é R$${wage}, após o aumento de 25%`);
             }
         }
     </script>
