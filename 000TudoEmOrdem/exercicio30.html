@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 30</title>
+</head>
+<body>
+    <p>30. [DESAFIO] Refaça o algoritmo 25, acrescentando o recurso de mostrar que tipo de triângulo será formado: 
+        - EQUILÁTERO: todos os lados iguais 
+        - ISÓSCELES: dois lados iguais 
+        - ESCALENO: todos os lados diferentes</p>
+
+    <p>Comprimento 1</p>
+    <input type = "number" id = "line1">
+    <p>Comprimento 2</p>
+    <input type = "number" id = "line2">
+    <p>Comprimento 3</p>
+    <input type = "number" id = "line3">
+    <br>
+    <button onclick="showTriangle()">Calcular</button>
+    
+        <script>
+            function showTriangle(){
+            let A = Number(document.getElementById("line1").value);
+            let B = Number(document.getElementById("line2").value);
+            let C = Number(document.getElementById("line3").value);
+
+            if(A+B>C && B+C>A && C+A>B){
+                if(A==B && B==C && A==C){
+                    alert("Com estas retas, podemos formar um triângulo EQUILÁTERO");
+                }else if((A==B && B!=C)||(A==C && C!=B)||(B==C && A!=B)){
+                    alert("Com estas retas, podemos formar um triângulo ISÓSCELES");
+                }else{
+                    alert("Com estas retas, podemos formar um triângulo ESCALENO");
+                }
+            }else{
+                alert("Não se pode fazer um triângulo com estas retas");
+            }
+        }
+    </script>
+</body>
+</html>

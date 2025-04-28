@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 15</title>
+</head>
+<body>
+    <p>15. Crie um programa que o usuário irá digitar o número de dias trabalhados em um mês e mostre o salário de um funcionário, sabendo que ele trabalha 8 horas por dia e ganha R$25 por hora trabalhada.
+    </p>
+    <p>Quantos dias você trabalhou este mês?</p>
+    <input type="number" id="workedDays">
+    <button onclick="showPayment()">Calcular Salário</button>
+
+    <script>
+        function showPayment(){
+            var workedDays = document.getElementById("workedDays").value;
+            var hourValue = 8 * 25;
+            var totalPayment = workedDays * hourValue;
+            alert(`Tendo trabalhado por ${workedDays} dias, e recebendo um valor de R$${hourValue}/dia, obteve-se o salário de R$${totalPayment}`)
+        }
+    </script>
+</body>
+</html>

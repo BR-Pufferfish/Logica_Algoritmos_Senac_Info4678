@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 22</title>
+</head>
+<body>
+    <p>22. Escreva um programa que leia o ano de nascimento de um rapaz e mostre a sua situação em relação ao alistamento militar. - Se estiver antes dos 18 anos, mostre em quantos anos faltam para o alistamento. - Se já tiver depois dos 18 anos, mostre quantos anos já se passaram do alistamento.</p>
+    <br>
+    <p>Digite sua idade:</p>
+    <input type="number" id="Age">
+    <button onclick="showMilitaryAge()">Verificar</button>
+
+    <script>
+        function showMilitaryAge(){
+            let age = Number(document.getElementById("Age").value);
+            let ageDif = age-18;
+            let ageDif2 = Math.abs(ageDif)
+            if(age<18){
+                alert(`Você ainda não pode se alistar, falta(m) ${ageDif} anos.`);
+            }else if(age===18){
+                alert(`Você já tem idade para o alistamento. Deve realizar o alistamento este ano.`);
+            }else{
+                alert(`Você está ${ageDif2} ano(s) atrasado com seu alistamento`);
+            }
+        }
+    </script>
+</body>
+</html>

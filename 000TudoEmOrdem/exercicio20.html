@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 20</title>
+</head>
+<body>
+    <p>20. Desenvolva um programa que leia um número inteiro e mostre se ele é PAR ou ÍMPAR.</p>
+    <p>Insira um número:</p>
+    <input placeholder="Ex: 1" type="number" id="number">
+    <button onclick="showOddEven()">Verificar</button>
+
+    <script>
+        function showOddEven(){
+            var number = Number(document.getElementById("number").value);
+            var calc = number % 2;
+            if(calc == 0){
+                alert(`O número ${number} é Par`);
+            }else{
+                alert(`O número ${number} é Ímpar`);
+            }
+            }
+    </script>
+</body>
+</html>

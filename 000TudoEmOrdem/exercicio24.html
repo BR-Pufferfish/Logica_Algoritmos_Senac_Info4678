@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 24</title>
+</head>
+<body>
+    <p>24. Faça um algoritmo que pergunte a distância que um passageiro deseja percorrer em Km. Calcule o preço da passagem, cobrando R$0.50 por Km para viagens até 200Km e R$0.45 para viagens mais longas.</p>
+    <p>Qual a distância do seu destino?</p>
+    <input placeholder="Quilômetros" type="number" id="dist">
+    <button onclick="showConversion()">Calcular</button>
+    <script>
+        function showConversion(){
+            let dist = Number(document.getElementById("dist").value);
+            if(dist<=200){
+                let dist50 = (dist*0.5).toFixed(2);
+                alert(`O custo da sua viagem é de R$${dist50}`);
+            }else{
+                let dist45 = (dist*0.45).toFixed(2);
+                alert(`O custo da sua viagem é de R$${dist45}`);
+            }
+        }
+    </script>
+</body>
+</html>

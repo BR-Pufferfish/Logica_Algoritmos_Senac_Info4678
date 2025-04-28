@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 34</title>
+</head>
+<body>
+    <p>34. O Índice de Massa Corpórea (IMC) é um valor calculado baseado na altura e no peso de uma pessoa. De acordo com o valor do IMC, podemos classificar o indivíduo dentro de certas faixas. 
+        - abaixo de 18.5: Abaixo do peso 
+        - entre 18.5 e 25: Peso ideal 
+        - entre 25 e 30: Sobrepeso
+        - entre 30 e 40: Obesidade 
+        - acima de 40: Obseidade mórbida Obs: O IMC é calculado pela expressão peso/altura² (peso dividido pelo quadrado da altura) 
+    </p>
+    <p>Peso</p>
+    <input placeholder="Em Quilos" type = number id = "weight">
+    <p>Altura</p>
+    <input placeholder="Em metros" type = number id = "height">
+    <br>
+    <button onclick="showImc()">Calcular</button>
+
+    <script>
+        function showImc(){
+            let W = Number(document.getElementById("weight").value);
+            let H = Number(document.getElementById("height").value);
+            let imc = Number(W/(H*H)).toFixed(1);
+
+            if(imc < 18.5){
+                alert(`Seu IMC é ${imc}, com isto, você está Abaixo do peso`);
+            }else if(imc > 18.5 && imc < 25){
+                alert(`Seu IMC é ${imc}, com isto, você está no Peso ideal`);
+            }else if(imc > 25 && imc < 30){
+                alert(`Seu IMC é ${imc}, com isto, você está com Sobrepeso`);
+            }else if(imc > 30 && imc < 40){
+                alert(`Seu IMC é ${imc}, com isto, você está com Obesidade`);
+            }else{
+                alert(`Seu IMC é ${imc}, com isto, você está com Obseidade mórbida`);
+            }
+        }
+    </script>
+</body>
+</html>

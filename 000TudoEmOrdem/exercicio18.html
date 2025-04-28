@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 18</title>
+</head>
+<body>
+    <p>18. Faça um programa que leia o ano de nascimento de uma pessoa, calcule a idade dela e depois mostre se ela pode ou não votar.</p>
+    <br>
+    <p>Qual o ano do seu nascimento?</p>
+    <input placeholder=Ex:2001 type="number" id="userBirthyear">
+    <br>
+    <button onclick="showUserVota()">Verificar</button>
+
+    <script>
+        function showUserVota(){
+        var userBorn = Number(document.getElementById("userBirthyear").value);
+        var userAge = 2025-userBorn;
+        if(userAge>18){
+            alert(`Tendo ${userAge} anos, você já pode votar`);
+        }else{
+            alert("Você ainda não pode votar.");
+        }
+    }
+    </script>
+
+
+
+</body>
+</html>

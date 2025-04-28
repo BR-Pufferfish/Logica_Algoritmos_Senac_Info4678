@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 31</title>
+</head>
+<body>
+    <p>31. [DESAFIO] Crie um jogo de JoKenPo (Pedra-Papel-Tesoura) </p>
+    <br>
+    <p>Digite Pedra, papel ou tesoura:</p>
+    <input placeholder="Jokenpo !" type="text" id="choice">
+    <button onclick="showJokenpo()">Pedra</button>
+
+    <script>
+        function showJokenpo(){
+            const jokenpo = ["pedra", "papel", "tesoura"];
+            let user = (document.getElementById("choice").value).toLowerCase();
+            let random = Math.trunc(Math.random()*3);
+            let machine = jokenpo[random];
+            if(user===jokenpo[0] || user===jokenpo[1] || user===jokenpo[2]){
+                let isUserLose1 = (user===jokenpo[0] && machine===jokenpo[1]);
+                let isUserLose2 = (user===jokenpo[1] && machine===jokenpo[2]);
+                let isUserLose3 = (user===jokenpo[2] && machine===jokenpo[0]);
+                let isUserWon1 = (user===jokenpo[0] && machine===jokenpo[2]);
+                let isUserWon2 = (user===jokenpo[1] && machine===jokenpo[0]);
+                let isUserWon3 = (user===jokenpo[2] && machine===jokenpo[1]);
+                if(isUserWon1 || isUserWon2 || isUserWon3){
+                    alert("Você Ganhou!");
+                }else if(isUserLose1 || isUserLose2 || isUserLose3){
+                    alert("Você Perdeu!");
+                }else{
+                    alert("EMPATE!");
+                }
+            }else{
+                alert("Escolha Inválida");
+            }
+}
+    </script>
+</body>
+</html>

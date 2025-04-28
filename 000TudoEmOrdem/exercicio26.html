@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 26</title>
+</head>
+<body>
+    <p>26. Escreva um algoritmo que leia dois números inteiros e compare-os, mostrando na tela uma das mensagens abaixo: 
+        - O primeiro valor é o maior 
+        - O segundo valor é o maior 
+        - Não existe valor maior, os dois são iguais 
+    </p>
+    <br>
+    <p>Primeiro Número</p>
+    <input type="number" id="numOne">
+    <p>Segundo Número</p>
+    <input type="number" id="numTwo">
+    <br>
+    <button onclick="calcNum()">Calcular</button>
+
+    <script>
+        function calcNum(){
+            let A = Number(document.getElementById("numOne").value);
+            let B = Number(document.getElementById("numTwo").value);
+            if(A>B){
+                alert("O primeiro valor é o maior");
+            }else if(A<B){
+                alert("O segundo valor é o maior");
+            }else{
+                alert("Não existe valor maior, os dois são iguais"); 
+            }
+        }
+    </script>
+</body>
+</html>

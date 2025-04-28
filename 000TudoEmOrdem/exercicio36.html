@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 36</title>
+</head>
+<body>
+    <p>36. Um programa de vida saudável quer dar pontos atividades físicas que podem ser trocados por dinheiro. O sistema funciona assim: 
+        - Cada hora de atividade física no mês vale pontos 
+        - até 10h de atividade no mês: ganha 2 pontos por hora 
+        - de 10h até 20h de atividade no mês: ganha 5 pontos por hora 
+        - acima de 20h de atividade no mês: ganha 10 pontos por hora 
+        - A cada ponto ganho, o cliente fatura R$0,05 (5 centavos) Faça um programa que leia quantas horas de atividade uma pessoa teve por mês, calcule e mostre quantos pontos ela teve e quanto dinheiro ela conseguiu ganhar.
+    </p>
+    <p>Comprimento da reta 1</p>
+    <input type = number id = "line1">
+    <p>Comprimento da reta 2</p>
+    <input type = number id = "line2">
+    <p>Comprimento da reta 3</p>
+    <input type = number id = "line3">
+    <br>
+    <button onclick="showTriangle()">Calcular</button>
+
+    <script>
+        function showTriangle(){
+            let A = Number(document.getElementById("line1").value);
+            let B = Number(document.getElementById("line2").value);
+            let C = Number(document.getElementById("line3").value);
+
+            //&& significa "E(and)" --> "se x E(and) y"
+            if(A+B>C && B+C>A && C+A>B){
+                alert("Com estas retas, podemos formar um triângulo");
+            }else{
+                alert("Não se pode fazer um triângulo com estas retas");
+            }
+        }
+    </script>
+</body>
+</html>
