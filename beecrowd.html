@@ -319,6 +319,7 @@ Iniciante 1038
 
 Iniciante 1040
 <script>
+    //1040 incompleta, tem que revisar!!!
     let linha1 = parseFloat(lines[0]);
     let exame = parseFloat(lines[1]);
     let A = parseFloat(linha1[0]);
@@ -453,16 +454,7 @@ Iniciante 1048
 </script>
 
 
-Iniciante 1052
-<script>
-    let A = parseInt(lines[0]);
-    const mes = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    let B = mes[Number(A-1)];
-    console.log(B);
-</script>
-
-
-Iniciante 1001
+Iniciante 1050
 <script>
     let A = parseInt(lines[0]);
     let ddd = {
@@ -475,9 +467,7 @@ Iniciante 1001
         27: "Vitoria",
         31: "Belo Horizonte",
     };
-    let undefin = "undefined";
-    let isUndef = ddd[A]===undefin;
-    if(isUndef){
+    if(ddd[A]===undefined){
         console.log("DDD nao cadastrado");
     }else{
         console.log(ddd[A]);
@@ -485,12 +475,21 @@ Iniciante 1001
 </script>
 
 
-Iniciante 1001
+Iniciante 1052
 <script>
-    var A = parseInt(lines[0]);
-    var B = parseInt(lines[1]);
-    var resultado = A + B;
-    console.log("X = "+resultado)
+    let A = parseInt(lines[0]);
+    const mes = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let B = mes[Number(A-1)];
+    console.log(B);
+</script>
+
+
+Iniciante 1049
+<script>
+const zoo{
+    carnivoro:"aguia",
+};
+console.log(carnivoro)
 </script>
 
 
