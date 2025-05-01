@@ -23,17 +23,21 @@
     <button onclick="showTriangle()">Calcular</button>
 
     <script>
-        function showTriangle(){
-            let A = Number(document.getElementById("line1").value);
-            let B = Number(document.getElementById("line2").value);
-            let C = Number(document.getElementById("line3").value);
-
-            //&& significa "E(and)" --> "se x E(and) y"
-            if(A+B>C && B+C>A && C+A>B){
-                alert("Com estas retas, podemos formar um triângulo");
-            }else{
-                alert("Não se pode fazer um triângulo com estas retas");
-            }
+        let hours = Number(document.getElementById("hours").value);
+        if(hours<10){
+            let points = Number(hours*2);
+            let money = Number(points*0.05).toFixed(2);
+            alert(`Praticando ${hours} horas de exercício, você ganhou:\n- ${points} Pontos;\n- R$${money}Reais.`)
+        }else if(hours>=10 && hours<20){
+            let points = Number(hours*5);
+            let money = Number(points*0.05).toFixed(2);
+            alert(`Praticando ${hours} horas de exercício, você ganhou:\n- ${points} Pontos;\n- R$${money}Reais.`)
+        }else if(hours>20){
+            let points = Number(hours*10);
+            let money = Number(points*0.05).toFixed(2);
+            alert(`Praticando ${hours} horas de exercício, você ganhou:\n- ${points} Pontos;\n- R$${money}Reais.`)
+        }else{
+            alert("Insira um valor válido.")
         }
     </script>
 </body>

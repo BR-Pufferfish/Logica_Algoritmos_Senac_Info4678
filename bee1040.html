@@ -1,0 +1,31 @@
+Iniciante 1040
+<script>
+    //1040 incompleta, tem que revisar!!!
+    let linha1 = lines[0].split(" ");
+    let exame = parseFloat(lines[1]);
+    let A = parseFloat(linha1[0]);
+    let B = parseFloat(linha1[1]);
+    let C = parseFloat(linha1[2]);
+    let D = parseFloat(linha1[3]);
+    let media = Number(((A*2)+(B*3)+(C*4)+D)/10).toFixed(1);
+    let mediaExame = Number((media+exame)/2).toFixed(1);
+    if(media >= 7){
+        console.log(`Media: ${media}`);
+        console.log("Aluno aprovado.");
+    }else if((media < 7 && media >= 5) && (mediaExame < 10 && mediaExame >= 5)){
+        console.log(`Media: ${media}`);
+        console.log("Aluno em exame.");
+        console.log(`Nota do exame: ${exame}`);
+        console.log("Aluno aprovado");
+        console.log(`Media final: ${mediaExame}`);
+    }else if((media < 7 && media >= 5) && (mediaExame < 5)){
+            console.log(`Media: ${media}`);
+            console.log("Aluno em exame.");
+            console.log(`Nota do exame: ${exame}`);
+            console.log("Aluno reprovado.");
+            console.log(`Media final: ${mediaExame}`);
+    }else if(media < 5){
+        console.log(`Media: ${media}`);
+        console.log("Aluno reprovado.");
+    }
+</script>
