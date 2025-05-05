@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //FORMA OVERKILL
+        // const DecomposicaoValorPorNota = class {
+        //     constructor(valorInicial, notas) {
+        //         this.#_resto = valorInicial;
+        //         this.#_listOfNotas = notas;
+        //         this.#_generate();
+        //     }
+
+        //     #_listOfNotas = [];
+        //     #_resto;
+        //     #_resultado = [];
+
+        //     #_generate() {
+        //         this.#_listOfNotas.forEach(nota => {
+        //             var valorPorNota = this.#_createValorPorNota(nota);
+        //             this.#_resto = valorPorNota.getResto();
+        //             this.#_resultado.push(`${valorPorNota.getQuantidadeNota()} notas(s) de R$ ${nota},00\n`);
+        //         });
+        //     }
+
+        //     getResults() {
+        //         return this.#_resultado.join("");
+        //     }
+
+        //     #_createValorPorNota(nota) {
+        //         var valorPorNota = new ValorPorNota(nota, this.#_resto);
+        //         return valorPorNota;
+        //     }
+        // }
+
+        // const ValorPorNota = class {
+        //     constructor(nota, valor) {
+        //         this.nota = nota;
+        //         this.valor = valor;
+        //     }
+
+        //     getQuantidadeNota() {
+        //         return Math.floor(this.valor / this.nota);
+        //     }
+
+        //     getResto() {
+        //         return this.valor % this.nota;
+        //     }
+        // }
+
+        // window.onload = function () {
+        //     var valorInformado = 576;
+
+        //     var decomposicaoValorPorNota = new DecomposicaoValorPorNota(valorInformado, notas);
+
+        //     var results = decomposicaoValorPorNota.getResults();
+
+        //     console.log(results);
+        // }
+
+        ///#########################################################################################################
+        ///#########################################################################################################
+        ///#########################################################################################################
+        ///#########################################################################################################
+
+        //FORMA PLENA
+        // window.onload = function () {
+        //     var resultado = calculaDecomposicaoPorNotas(576);
+        //     console.log(resultado);
+        // }
+
+        // function calculaDecomposicaoPorNotas(valorDigitado) {
+        //     var sobraCalculo = valorDigitado;
+        //     var resultados = [];
+        //     notas.forEach(nota => {
+        //         var valorCalculo = calculaDivisaoSemSobras(sobraCalculo, nota);
+        //         sobraCalculo = calculaResto(sobraCalculo, nota);
+        //         resultados.push(`${valorCalculo} notas(s) de R$ ${nota},00\n`);
+        //     });
+        //     return resultados.join("");
+        // }
+
+        // function calculaDivisaoSemSobras(sobraCalculo, nota) {
+        //     return Math.floor(sobraCalculo / nota);
+        // }
+
+        // function calculaResto(sobraCalculo, nota) {
+        //     return sobraCalculo % nota;
+        // }
+
+        ///#########################################################################################################
+        ///#########################################################################################################
+        ///#########################################################################################################
+        ///#########################################################################################################
+
+        const notas = [100, 50, 20, 10, 5, 2, 1];
+
+        //FORMA SIMPLES
+        window.onload = function () {
+            var valor = 576;
+            var resto = 0;
+            var notasDeCem = Math.floor(valor / 100);
+            resto = valor % 100;
+            var notasDeCinquenta = Math.floor(resto / 50);
+            resto = resto % 50;
+            var notasDeVinte = Math.floor(resto / 20);
+            resto = resto % 20;
+            var notasDeDez = Math.floor(resto / 10);
+            resto = resto % 10;
+            var notasDeCinco = Math.floor(resto / 5);
+            resto = resto % 5;
+            var notasDeDois = Math.floor(resto / 2);
+            resto = resto % 2;
+            var notasDeUm = Math.floor(resto / 1);
+            console.log(`${notasDeCem} nota(s) de R$ 100,00: \n${notasDeCinquenta} nota(s) de R$ 50,00: \n${notasDeVinte} nota(s) de R$ 20,00: \n${notasDeDez} nota(s) de R$ 10,00: \n${notasDeCinco} nota(s) de R$ 5,00: \n${notasDeDois} nota(s) de R$ 2,00: \n${notasDeUm} nota(s) de R$ 1,00: \n`)
+        }
+    </script>
+</body>
+
+</html>
