@@ -13,16 +13,15 @@
 
     <script>
         function show(){
-        var todos = [];
-        for (i=30; i>0; i--){
-            todos = todos +" "+ i;
-        }
-        var final = [];
-        for(a=0; a<30; a+=4){
-            final= final+todos[a];
+        var todos = "";
+        for (var i=30; i>0; i--){
+            if(i%4 == 0){
+                todos =  todos + "[" + i + "]" + " ";
+            }else{
+                todos = todos + i + " ";
+            }
         }
         console.log(todos);
-        console.log(final);
         }
     </script>
     </body>
