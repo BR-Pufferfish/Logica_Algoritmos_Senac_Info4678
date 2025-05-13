@@ -15,12 +15,28 @@
 
     <script>
         function show(){
-        var todos = "";
-        for (var i=0; i<19; i+=3){
-            todos = todos +" "+ i;
+        let todos = "";
+        let adulto = 0;
+        let crianca = 0;
+        let max = 0;
+        let B = 0;
+ 
+        for (var i=0; i<10; i++){
+            let A = Number(Math.trunc(Math.random()*100));
+            todos += A + " ";
+            B += A;
+            if(A > 18){
+                adulto += 1;
+            }
+            if(A < 5){
+                crianca += 1;
+            }
+            if(A > max){
+                max = A;
+            }
         }
-        todos = todos + " Acabou!";
-        console.log(todos);
+        let media = Number(B/10).toFixed(2);
+        console.log(`Idades: ${todos}\nA. ${media}\nB. ${adulto}\nC. ${crianca}\nD. ${max}`);
     }
     </script>
 </body>
