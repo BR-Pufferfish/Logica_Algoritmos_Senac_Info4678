@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 43</title>
+</head>
+<body>
+    <p>55. [DESAFIO] Vamos melhorar o jogo que fizemos no exercício 32. A partir de agora, o computador vai sortear um número entre 1 e 10 e o jogador vai ter 4 tentativas para tentar acertar.</p>
+    <button onclick="show()">Mostre-me</button>
+
+    <script>
+        function show(){
+        var todos = "";
+        for (var i=30; i>0; i--){
+            if(i%4 == 0){
+                todos =  todos + "[" + i + "]" + " ";
+            }else{
+                todos = todos + i + " ";
+            }
+        }
+        console.log(todos);
+        }
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 51</title>
+</head>
+<body>
+    <p>51. Faça um aplicativo que leia o preço de 8 produtos. No final, mostre na tela qual foi o maior e qual foi o menor preço digitados. </p>
+    <button onclick="show()">Mostre-me</button>
+
+    <script>
+        function show(){
+        let todos = [];
+        let max = 0;
+        let min = 1000;
+        for (let i=0; i<8; i++){
+            let A = Number(Math.random()*999).toFixed(2);
+            todos += + A + " ";
+            if(A > max){
+                max = A;
+            }
+            if(A < min){
+                min = A;
+            }
+        }
+        console.log(`${todos}\nO maior preço foi: R$ ${max}\nO menor preço foi: R$ ${min}`);
+    }
+    </script>
+</body>
+</html>

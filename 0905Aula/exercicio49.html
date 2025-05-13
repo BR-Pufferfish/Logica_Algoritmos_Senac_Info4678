@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 49</title>
+</head>
+<body>
+    <p>49. Crie um programa que leia 6 números inteiros e no final mostre quantos deles são pares e quantos são ímpares. </p>
+    <button onclick="show()">Mostre-me</button>
+
+    <script>
+        function show(){
+        let par = 0;
+        let imp = 0;
+        let A = "";
+        for (let i=0; i<6; i++){
+            A = Number(prompt('Digite um valor'));
+            if(A%2 == 0){
+                par += 1;
+            }else{
+                imp += 1;
+            }
+        }
+        console.log(`Você digitou ${par} números pares e ${imp} números ímpares`);
+        }
+    </script>
+    </body>
+    </html>
