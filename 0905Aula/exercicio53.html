@@ -16,13 +16,35 @@
 
     <script>
         function show(){
-        var todos = "";
-        for (var i=0; i<5; i++){
-            let A = Number(Math.trunc(Math.random()*2));
-            
+        let hom = 0;
+        let mul = 0;
+        let medGrp = 0;
+        let medHom = 0;
+        let mulVinte = 0;
+        let valores = "";
+        let generos = "";
+
+        for(let i=0; i<5; i++){
+            let idade = Math.trunc(Math.random()*100);
+            let sexo = Math.trunc(Math.random()*2);
+            valores += idade + " ";
+            generos += sexo + " ";
+            if (sexo == 0 && idade > 20){
+                mulVinte += 1;
+                mul += 1;
+            }else if(sexo == 0){
+                mul += 1;
+            }else{
+                hom += 1;
+                medHom += idade;
+            }
+            medGrp += idade;
         }
-        todos = todos + " Acabou!";
-        console.log(todos);
+
+        medGrp = Number(medGrp/5).toFixed(2);
+        medHom = Number(medHom/hom).toFixed(2);
+
+        console.log(`Idades: ${valores}\nGêneros: ${generos}\n\nA. ${hom} homens\nB. ${mul} mulheres\nC. ${medGrp} idade média (grupo)\nD. ${medHom} idade média (homens)\nE. ${mulVinte}`);
     }
     </script>
 </body>

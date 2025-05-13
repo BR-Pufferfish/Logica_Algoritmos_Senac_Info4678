@@ -14,14 +14,33 @@
     <p>Digite um Número</p>
 
     <script>
-        window.onload = function(){
-        let A = Number(prompt('Digite um valor'));
-        var todos = "";
-        for (i=1; i<=A; i++){
-            todos = todos +" "+ i;
+        function(){
+        let pesos = "";
+        let alturas = "";
+        let medAlt = 0;
+        let B = 0;
+        let C = 0;
+        let D = 0;
+        for(let i=0; i<7; i++){
+            let peso = Number(Math.random()*150).toFixed(2);
+            let altura = Number(Math.random()*2).toFixed(2);
+            pesos += peso + " ";
+            alturas += altura + " ";
+            medAlt += altura;
+            
+            if(peso > 90){
+                B += 1;
+            }
+            if(peso < 50 && altura < 1.6){
+                C += 1;
+            }
+            if(peso > 100 && altura > 1.9){
+                D += 1;
+            }
+            
         }
-        todos = todos + " Acabou!";
-        console.log(todos);
+        medAlt = Number(medAlt/7).toFixed(2);
+        console.log(`Pesos: ${pesos}\nAlturas: ${alturas}\n\nA. ${medAlt} média (altura)\nB. ${B} pessoas\nC. ${C} pessoas\nD. ${D} pessoas`);
         }
     </script>
     </body>
