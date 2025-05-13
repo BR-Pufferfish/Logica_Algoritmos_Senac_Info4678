@@ -539,51 +539,92 @@ Iniciante 1052
 </script>
 
 
-Iniciante 1001
+
+Iniciante 1059
 <script>
-    var A = parseInt(lines[0]);
-    var B = parseInt(lines[1]);
-    var resultado = A + B;
-    console.log("X = "+resultado)
+for(let i=2; i<=100; i+=2){
+	console.log(i);
+}
 </script>
 
 
-Iniciante 1001
+Iniciante 1064
 <script>
-    for(var i = 0; i < 5; i++){
-        console.log(i);
+let pos = 0;
+let med = 0;
+let somaPos = 0;
+for(let i=0; i<6; i++){
+	let A = Number(lines[i]);
+	if(A > 0){
+		pos += 1;
+		somaPos += A;
+	}
+}
+med = (somaPos/pos).toFixed(1);
+console.log(`${pos} valores positivos\n${med}`);
+</script>
+
+
+Iniciante 1065
+<script>
+let par = 0;
+for(let i=0; i<5; i++){
+	let A = Number(lines[i]);
+	if(A%2 == 0){
+		par += 1;
+	}
+}
+console.log(`${par} valores pares`);
+</script>
+
+
+Iniciante 1066
+<script>
+    let par = 0;
+    let imp = 0;
+    let pos = 0;
+    let neg = 0;
+    for(let i=0; i<5; i++){
+        let A = Number(lines[i]);
+        if(A > 0){
+            pos += 1;
+        }
+        if(A < 0){
+            A = Number(A*-1);
+            neg += 1;
+        }
+        if(A%2 === 0){
+		    par += 1;
+	    }else{
+            imp += 1;
+        }
     }
+    console.log(`${par} valor(es) par(es)\n${imp} valor(es) impar(es)\n${pos} valor(es) positivo(s)\n${neg} valor(es) negativo(s)`);
+</script>
 
-    var i = 0;
-    while(i < 5){
-        console.log(i);
-        i++;
+
+Iniciante 1067
+<script>
+    let X = Number(lines[0]);
+    if(X%2 === 0){
+        let X = Number(X + 1);
+        for(let i=1; i<=X; i+=2){
+	    console.log(i);
+        }
+    }else{
+        for(let i=1; i<=X; i+=2){
+	    console.log(i);
+        }
     }
 </script>
 
 
-Iniciante 1001
+Iniciante 1071
 <script>
-    var A = parseInt(lines[0]);
-    var B = parseInt(lines[1]);
-    var resultado = A + B;
-    console.log("X = "+resultado)
-</script>
+    let A = Number(lines[0]);
+    let B = Number(lines[1]);
+    let soma = 0;
+    for(){
 
-
-Iniciante 1001
-<script>
-    var A = parseInt(lines[0]);
-    var B = parseInt(lines[1]);
-    var resultado = A + B;
-    console.log("X = "+resultado)
-</script>
-
-
-Iniciante 1001
-<script>
-    var A = parseInt(lines[0]);
-    var B = parseInt(lines[1]);
-    var resultado = A + B;
-    console.log("X = "+resultado)
+    }
 </script>
