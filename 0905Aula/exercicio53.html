@@ -6,12 +6,12 @@
     <title>Exercício 41</title>
 </head>
 <body>
-    <p>53. Faça um programa que leia a idade e o sexo de 5 pessoas, mostrando no final:
-        A. Quantos homens foram cadastrados 
-        B. Quantas mulheres foram cadastradas 
-        C. A média de idade do grupo 
-        D. A média de idade dos homens 
-        E. Quantas mulheres tem mais de 20 anos </p>
+    <p>53. Faça um programa que leia a idade e o sexo de 5 pessoas, mostrando no final:</p>
+        <p>A. Quantos homens foram cadastrados</p> 
+        <p>B. Quantas mulheres foram cadastradas</p> 
+        <p>C. A média de idade do grupo</p> 
+        <p>D. A média de idade dos homens</p> 
+        <p>E. Quantas mulheres tem mais de 20 anos</p>
     <button onclick="show()">Mostre-me</button>
 
     <script>
@@ -25,8 +25,11 @@
         let generos = "";
 
         for(let i=0; i<5; i++){
-            let idade = Math.trunc(Math.random()*100);
-            let sexo = Math.trunc(Math.random()*2);
+            //esse método gera dados autom. pra não ter que digitar 10 entradas.
+            //let idade = Math.trunc(Math.random()*100);
+            //let sexo = Math.trunc(Math.random()*2);
+            let idade = Number(prompt('Digite a idade'));
+            let sexo = prompt('0 - Mulher  |  1 - Homem');
             valores += idade + " ";
             generos += sexo + " ";
             if (sexo == 0 && idade > 20){

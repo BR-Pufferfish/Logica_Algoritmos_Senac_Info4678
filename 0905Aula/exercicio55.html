@@ -11,15 +11,15 @@
 
     <script>
         function show(){
-        var todos = "";
-        for (var i=30; i>0; i--){
-            if(i%4 == 0){
-                todos =  todos + "[" + i + "]" + " ";
+        let sorteio = Number(Math.trunc(Math.random()*10));
+        for (var i=0; i<4; i++){
+            let chute = Number(prompt('De 0 a 10, tente adivinhar o valor sorteado.\n'));
+            if(chute === sorteio){
+                alert("Parabéns! Você acertou");
             }else{
-                todos = todos + i + " ";
+                alert("Ainda não...");
             }
         }
-        console.log(todos);
         }
     </script>
     </body>

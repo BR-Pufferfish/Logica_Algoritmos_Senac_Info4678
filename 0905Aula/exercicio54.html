@@ -6,15 +6,15 @@
     <title>Exercício 42</title>
 </head>
 <body>
-    <p>54. Desenvolva um aplicativo que leia o peso e a altura de 7 pessoas, mostrando no final:
-        A. Qual foi a média de altura do grupo 
-        B. Quantas pessoas pesam mais de 90Kg 
-        C. Quantas pessoas que pesam menos de 50Kg tem menos de 1.60m 
-        D. Quantas pessoas que medem mais de 1.90m pesam mais de 100Kg.</p>
-    <p>Digite um Número</p>
+    <p>54. Desenvolva um aplicativo que leia o peso e a altura de 7 pessoas, mostrando no final:</p>
+        <p>A. Qual foi a média de altura do grupo </p>
+        <p>B. Quantas pessoas pesam mais de 90Kg </p>
+        <p>C. Quantas pessoas que pesam menos de 50Kg tem menos de 1.60m </p>
+        <p>D. Quantas pessoas que medem mais de 1.90m pesam mais de 100Kg.</p>
+    <button onclick="show()">Mostre-me</button>
 
     <script>
-        function(){
+        function show(){
         let pesos = "";
         let alturas = "";
         let medAlt = 0;
@@ -22,8 +22,12 @@
         let C = 0;
         let D = 0;
         for(let i=0; i<7; i++){
-            let peso = Number(Math.random()*150).toFixed(2);
-            let altura = Number(Math.random()*2).toFixed(2);
+            //let peso = Number((Math.random()*150).toFixed(2));
+            //let altura = Number((Math.random()(*2 - 1 + 1) + 1).toFixed(2));
+            //(Math.random() * (max - min + 1)) + min  --> Isso força o random a gerar o valor dentro de um intervalo especificado.
+            
+            let peso = Number(prompt('Digite o peso'));
+            let altura = prompt('Digite a altura em metros\n(utilize "." ao invés de ",")');
             pesos += peso + " ";
             alturas += altura + " ";
             medAlt += altura;
