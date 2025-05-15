@@ -13,10 +13,13 @@
         function show(){
         let todos = [];
         let max = 0;
-        let min = 1000;
+        let min = Number.MAX_VALUE;
         for (let i=0; i<8; i++){
             let A = Number(Math.random()*999).toFixed(2);
+            //gera valores aleatórios pra não precisar digitar manualmente
+            //let A = Number(prompt('Digite o valor do produto\nUtilize "." ao invés de ","'));
             todos += + A + " ";
+
             if(A > max){
                 max = A;
             }

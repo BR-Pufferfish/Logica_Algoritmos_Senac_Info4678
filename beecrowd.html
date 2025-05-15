@@ -684,7 +684,7 @@ Iniciante 1078
     let A = Number(lines[0]);
     for(let i=1; i<=10; i++){
         let calc = Number(A*i);
-        console.log(` ${i} x ${A} = ${calc} `);
+        console.log(`${i} x ${A} = ${calc}`);
     }
 </script>
 
@@ -714,18 +714,35 @@ Iniciante 1080
             pos = i+1;
         }
     }
-    console.log(` ${maior}\n${pos} `);
+    console.log(`${maior}\n${pos}`);
 </script>
 
 
 Iniciante 1071
 <script>
     let A = Number(lines[0]);
-    let B = Number(lines[1]);
-    let soma = 0;
-    for(){
-
+    let C = 0;
+    let R = 0;
+    let S = 0;
+    let total = 0;
+    for(i=0; i<=A; i++){
+        let cob = lines[i].split(" ");
+        let valor = Number(cob[0]);
+        total += valor;
+        if(cob[1] === "C"){
+            C += valor;
+        }
+        if(cob[1] === "R"){
+            R += valor;
+        }
+        if(cob[1] === "S"){
+            S += valor;
+        }
     }
+    let percenC = Number(((C*100)/total).toFixed(2));
+    let percenR = Number(((R*100)/total).toFixed(2));
+    let percenS = Number(((S*100)/total).toFixed(2));
+    console.log(`Total: ${total} cobaias\nTotal de coelhos: ${C}\nTotal de ratos: ${R}\nTotal de sapos: ${S}\nPercentual de coelhos: ${percenC} %\nPercentual de ratos: ${percenR} %\nPercentual de sapos: ${percenS} %`);
 </script>
 
 
