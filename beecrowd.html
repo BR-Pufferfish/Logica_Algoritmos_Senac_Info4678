@@ -530,6 +530,31 @@ Iniciante 1050
 </script>
 
 
+Iniciante 1051
+<script>
+let A = parseFloat(lines[0]);
+let imposto = 0;
+if(A-2000 <= 0){
+	console.log("Isento");
+}else if(A-3000 <= 0){
+	A -= 2000;
+	imposto = Number(((A*0.08).toFixed(2)));
+	console.log(`R$ ${imposto}`);
+}else if(A-4500 <= 0){
+	A -= 2000;
+	A -= 1000;
+	imposto = Number(((A*0.18) + 80).toFixed(2));
+	console.log(`R$ ${imposto}`);
+}else if(A-4500 <= 0){
+	A -= 2000;
+	A -= 1000;
+	A -= 1500;
+	imposto = Number(((A*0.28) + 350).toFixed(2));
+	console.log(`R$ ${imposto}`);
+}
+</script>
+
+
 Iniciante 1052
 <script>
     let A = parseInt(lines[0]);
@@ -537,7 +562,6 @@ Iniciante 1052
     let B = mes[Number(A-1)];
     console.log(B);
 </script>
-
 
 
 Iniciante 1059
@@ -773,7 +797,59 @@ Iniciante 1095
 </script>
 
 
-Iniciante 1071
+Iniciante 1113
+<script>
+for(let i=0; i<Number.MAX_VALUE; i++){
+	let valores = lines[i].split(" ");
+	let A = Number(valores[0]);
+	let B = Number(valores[1]);
+	if(A > B){
+		console.log("Decrescente");
+	}else if(A < B){
+		console.log("Crescente");
+	}else{
+		break;
+	}
+}
+</script>
+
+
+Iniciante 1114
+<script>
+for(let i=0; i<Number.MAX_VALUE; i++){
+	let A = Number(lines[i]);
+	if(A === 2002){
+		console.log("Acesso Permitido");
+		break;
+	}else{
+		console.log("Senha Invalida");
+    }
+}
+</script>
+
+
+Iniciante 1115
+<script>
+for(let i=0; i<Number.MAX_VALUE; i++){
+	let A = lines[i].split(" ");
+	let X = Number(A[0]);
+	let Y = Number(A[1]);
+	if(X > 0 && Y > 0){
+		console.log("primeiro");
+	}else if(X < 0 && Y > 0){
+		console.log("segundo");
+	}else if(X < 0 && Y < 0){
+		console.log("terceiro");
+	}else if(X > 0 && Y < 0){
+		console.log("quarto");
+	}else{
+		break;
+    }
+}
+</script>
+
+
+Iniciante 10
 <script>
     let A = Number(lines[0]);
     let B = Number(lines[1]);
@@ -784,7 +860,7 @@ Iniciante 1071
 </script>
 
 
-Iniciante 1071
+Iniciante 10
 <script>
     let A = Number(lines[0]);
     let B = Number(lines[1]);
@@ -795,7 +871,7 @@ Iniciante 1071
 </script>
 
 
-Iniciante 1071
+Iniciante 10
 <script>
     let A = Number(lines[0]);
     let B = Number(lines[1]);
@@ -806,7 +882,7 @@ Iniciante 1071
 </script>
 
 
-Iniciante 1071
+Iniciante 10
 <script>
     let A = Number(lines[0]);
     let B = Number(lines[1]);
@@ -817,7 +893,7 @@ Iniciante 1071
 </script>
 
 
-Iniciante 1071
+Iniciante 10
 <script>
     let A = Number(lines[0]);
     let B = Number(lines[1]);
@@ -828,7 +904,7 @@ Iniciante 1071
 </script>
 
 
-Iniciante 1071
+Iniciante 10
 <script>
     let A = Number(lines[0]);
     let B = Number(lines[1]);
@@ -839,7 +915,7 @@ Iniciante 1071
 </script>
 
 
-Iniciante 1071
+Iniciante 10
 <script>
     let A = Number(lines[0]);
     let B = Number(lines[1]);
@@ -850,7 +926,7 @@ Iniciante 1071
 </script>
 
 
-Iniciante 1071
+Iniciante 10
 <script>
     let A = Number(lines[0]);
     let B = Number(lines[1]);
@@ -861,40 +937,7 @@ Iniciante 1071
 </script>
 
 
-Iniciante 1071
-<script>
-    let A = Number(lines[0]);
-    let B = Number(lines[1]);
-    let soma = 0;
-    for(){
-
-    }
-</script>
-
-
-Iniciante 1071
-<script>
-    let A = Number(lines[0]);
-    let B = Number(lines[1]);
-    let soma = 0;
-    for(){
-
-    }
-</script>
-
-
-Iniciante 1071
-<script>
-    let A = Number(lines[0]);
-    let B = Number(lines[1]);
-    let soma = 0;
-    for(){
-
-    }
-</script>
-
-
-Iniciante 1071
+Iniciante 10
 <script>
     let A = Number(lines[0]);
     let B = Number(lines[1]);
