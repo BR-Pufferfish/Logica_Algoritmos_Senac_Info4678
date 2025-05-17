@@ -849,36 +849,70 @@ for(let i=0; i<Number.MAX_VALUE; i++){
 </script>
 
 
-Iniciante 10
+Iniciante 1117
 <script>
-    let A = Number(lines[0]);
-    let B = Number(lines[1]);
-    let soma = 0;
-    for(){
+    let media = 0;
+    let fim = 0;
+    for(i=0; i<Number.MAX_VALUE; i++){
+        let A = Number(lines[i]);
+        if(A >= 0 && A <= 10){
+            media += A;
+            fim +=1;
+        }else{
+            console.log("nota invalida");
+        }
+        if(fim === 2){
+            break;
+        }
+    }
+    media = Number(media/2).toFixed(2);
+    console.log(`media = ${media}`);
+</script>
 
+
+Iniciante 1134
+<script>
+    let alc = 0;
+    let gas = 0;
+    let die = 0;
+    for(i=0; i<Number.MAX_VALUE; i++){
+        let A = Number(lines[i]);
+        if(A === 1){
+            alc += 1;
+        }
+        if(A === 2){
+            gas += 1;
+        }
+        if(A === 3){
+            die += 1;
+        }
+        if(A === 4){
+            console.log(`MUITO OBRIGADO\nAlcool: ${alc}\nGasolina: ${gas}\nDiesel: ${die}`);
+            break;
+        }
     }
 </script>
 
 
-Iniciante 10
+Iniciante 1142
 <script>
-    let A = Number(lines[0]);
-    let B = Number(lines[1]);
-    let soma = 0;
-    for(){
-
+    let N = Number(lines[0]);
+    let max = N*4;
+    let resul = [];
+    let fim = 0;
+    for(i=1; i<max; i++){
+        fim +=1;
+        if(i%4 !== 0){
+           resul += i + " "; 
+        }
+        if(i%4 === 0){
+            resul += "PUM" + "\n";
+        }
+        if(fim === max){
+            break;
+        }
     }
-</script>
-
-
-Iniciante 10
-<script>
-    let A = Number(lines[0]);
-    let B = Number(lines[1]);
-    let soma = 0;
-    for(){
-
-    }
+    console.log(resul);
 </script>
 
 
