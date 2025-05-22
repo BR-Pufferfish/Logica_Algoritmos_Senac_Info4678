@@ -11,17 +11,28 @@
 
     <script>
         function Show(){
-            //Não consegui fazer sem o break;
-        soma = 0;
-        for (var i=0;;i++){
-            let num = Number(prompt("Digite um Valor"));
-            if(num === 1111){
-                break;
-            }else{
-            soma += num;
+            // Método sem o break
+            // soma = 0;
+            // for (var i=0; i<1; i++){
+            //     let num = Number(prompt("Digite um Valor"));
+            //     if(num != 1111){
+            //          soma += num;
+            //          i--;
+            //     }
+            // }
+            // console.log(soma);
+            //}
+        
+            soma = 0;
+            for (var i=0;;i++){
+                let num = Number(prompt("Digite um Valor"));
+                if(num === 1111){
+                    break;
+                }else{
+                soma += num;
+                }
             }
-        }
-        console.log(soma);
+            console.log(soma);
         }
     </script>
     </body>
