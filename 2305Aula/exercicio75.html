@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 75</title>
+</head>
+<body>
+    <p></p>
+    <button onclick="show()">Mostre-me</button>
+
+    <script>
+        function show(){
+            let array = [1, 1,];
+            for(var i=2; i<16; i++){
+                let calc =  Number(array[i-2]+array[i-1]);
+                array[i] = calc;
+            }
+            console.log(array);
+        }
+    </script>
+</body>
+</html>

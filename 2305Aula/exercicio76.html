@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 76</title>
+</head>
+<body>
+    <p>76. Crie um programa que preencha automaticamente um vetor numérico com 7 números gerados aleatoriamente pelo computador e depois mostre os valores gerados na tela. </p>
+    <button onclick="show()">Mostre-me</button>
+
+    <script>
+        function show(){
+            let array = [];
+            for(var i=0; i<7; i++){
+                let A = Number(Math.trunc(Math.random()*7));
+                array[i] = A;
+            }
+            console.log(array);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 77</title>
+</head>
+<body>
+    <p>77. Faça um programa que leia 7 nomes de pessoas e guarde-os em um vetor. No final, mostre uma listagem com todos os nomes informados, na ordem inversa daquela em que eles foram informados. </p>
+    <button onclick="show()">Mostre-me</button>
+
+    <script>
+        function show(){
+            let array = [];
+            for(var i=0; i<7; i++){
+                let nome = prompt('Digite seu nome');
+                array[i] = nome;
+            }
+            console.log(array.reverse());
+        }
+    </script>
+</body>
+</html>

@@ -468,6 +468,26 @@ Iniciante 1046
 </script>
 
 
+Iniciante 1047
+<script>
+    //log errado, ajustar.
+    let tempo = lines[0].split(" ");
+    let HHini = Number(tempo[0]);
+    let MMini = Number(tempo[1]);
+    let HHfim = Number(tempo[2]);
+    let MMfim = Number(tempo[3]);
+    if(HHini===HHfim && MMini===MMfim){
+        console.log("O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)");
+    }else{
+        let calc = Number((HHfim*60+MMfim) - (HHini*60+MMini));
+        let hora = Number(Math.trunc(calc/60));
+        calc = calc%60;
+        let min = Number(calc);
+        console.log(`O JOGO DUROU ${hora} HORA(S) E ${min} MINUTO(S)`);
+    }
+</script>
+
+
 Iniciante 1048
 <script>
     let A = parseFloat(lines[0]);
