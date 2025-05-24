@@ -11,12 +11,23 @@
 
     <script>
         function show(){
+            
+            // let array = [];
+            // for(var i=0; i<7; i++){
+            //     let nome = prompt('Digite seu nome');
+            //     array[i] = nome;
+            // }
+            // console.log(array.reverse());
+
             let array = [];
+            let reverseArr = [];
             for(var i=0; i<7; i++){
                 let nome = prompt('Digite seu nome');
                 array[i] = nome;
+                reverseArr[6-i] = nome;
             }
-            console.log(array.reverse());
+            console.log(`Ordenado: ${array}`);
+            console.log(`Reverso: ${reverseArr}`);
         }
     </script>
 </body>
