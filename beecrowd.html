@@ -470,20 +470,21 @@ Iniciante 1046
 
 Iniciante 1047
 <script>
-    //log errado, ajustar.
     let tempo = lines[0].split(" ");
     let HHini = Number(tempo[0]);
     let MMini = Number(tempo[1]);
     let HHfim = Number(tempo[2]);
     let MMfim = Number(tempo[3]);
-    if (HHini === HHfim && MMini === MMfim) {
+    if(HHini===HHfim && MMini===MMfim){
         console.log("O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)");
-    } else {
-        let calc = Number((HHfim * 60 + MMfim) - (HHini * 60 + MMini));
-        let hora = Number(Math.trunc(calc / 60));
-        calc = calc % 60;
-        let min = Number(calc);
-        console.log(`O JOGO DUROU ${hora} HORA(S) E ${min} MINUTO(S)`);
+    }else{
+        let calc = Number((HHfim*60+MMfim) - (HHini*60+MMini));
+        if (calc < 0){
+            calc += 1440;
+        }
+        let hora = Number(Math.trunc(calc/60));
+        let min = Number(calc%60);
+        console.log(O JOGO DUROU ${hora} HORA(S) E ${min} MINUTO(S));
     }
 </script>
 
@@ -553,25 +554,22 @@ Iniciante 1050
 Iniciante 1051
 <script>
     let A = parseFloat(lines[0]);
-    let imposto = 0;
-    A = number(A - 2000);
-    if (A <= 0) {
+    if (A > 4500) {
+		A -= 4500;
+		let impAnterior = 350;
+		let imposto = (Number(A*0.28 +impAnterior)).toFixed(2);
+        console.log(`R$ ${imposto}`);
+    }else if (A >3000 && A <= 4500) {
+		A -= 3000;
+		let impAnterior = 80;
+		let imposto = (Number(A*0.18 +impAnterior)).toFixed(2);
+        console.log(`R$ ${imposto}`);
+    }else if (A >2000 && A <= 3000) {
+		A -= 2000;
+		let imposto = (Number(A*0.08)).toFixed(2);
+        console.log(`R$ ${imposto}`);
+    }else{
         console.log("Isento");
-    } else if (A - 3000 <= 0) {
-        A -= 2000;
-        imposto = Number(((A * 0.08)));
-        console.log(`R$ ${imposto.toFixed(2)}`);
-    } else if (A - 4500 <= 0) {
-        A -= 2000;
-        A -= 1000;
-        imposto = Number(((A * 0.18) + 80));
-        console.log(`R$ ${imposto.toFixed(2)}`);
-    } else if (A - 4500 <= 0) {
-        A -= 2000;
-        A -= 1000;
-        A -= 1500;
-        imposto = Number(((A * 0.28) + 350));
-        console.log(`R$ ${imposto.toFixed(2)}`);
     }
 </script>
 
@@ -591,6 +589,41 @@ Iniciante 1059
         console.log(i);
     }
 </script>
+
+
+Iniciante 1061
+<script>
+   //Entrada
+	let val1 = lines[0].split(" ");
+	let diaIni = parseInt(val1[1]);
+	let val2 = lines[1].split(" : ");
+	let horaIni = parseInt(val2[0]);
+	let minIni = parseInt(val2[1]);
+	let segIni = parseInt(val2[2]);
+	
+	let val3 = lines[2].split(" ");
+	let diaFim = parseInt(val3[1]);
+	let val4 = lines[3].split(" : ");
+	let horaFim = parseInt(val4[0]);
+	let minFim = parseInt(val4[1]);
+	let segFim = parseInt(val4[2]);
+
+	//Calculo
+	let totalSegundosIni = Number((diaIni*86400) + (horaIni*3600) + (minIni*60) + segIni)
+	let totalSegundosFim = Number((diaFim*86400) + (horaFim*3600) + (minFim*60) + segFim)
+	let diferencaDias = Number(totalSegundosFim - totalSegundosIni);
+	let dias = Number(Math.trunc(diferencaDias/86400));
+	diferencaDias = diferencaDias%86400;
+	let horas = Number(Math.trunc(diferencaDias/3600));
+	diferencaDias = diferencaDias%3600;
+	let mins = Number(Math.trunc(diferencaDias/60));
+	diferencaDias = diferencaDias%60;
+	let segs = diferencaDias;
+	
+	//Retorno
+	console.log(`${dias} dia(s)\n${horas} hora(s)\n${mins} minuto(s)\n${segs} segundo(s)`);
+</script>
+
 
 
 Iniciante 1064
@@ -779,6 +812,37 @@ Iniciante 1080
 </script>
 
 
+Iniciante 1091
+<script>
+    let qntd = parseInt(lines[0]);
+    let cobaias = null;
+    let totalC = null;
+    let totalR = null;
+    let totalS = null;
+    for(let i = 1; i <= qntd; i++){
+        let valor = lines[i].split(" ");
+        let A = parseInt(valor[0]);
+        let B = valor[1];
+        cobaias += A;
+        if(B === "C"){
+            totalC += A;
+        }
+        if(B === "R"){
+            totalR += A;
+        }
+        if(B === "S"){
+            totalS += A;
+        }
+    }
+    let percentC = Number((totalC*100)/cobaias).toFixed(2);
+    let percentR = Number((totalR*100)/cobaias).toFixed(2);
+    let percentS = Number((totalS*100)/cobaias).toFixed(2);
+
+    console.log(`Total: ${cobaias} cobaias\nTotal de coelhos: ${totalC}\nTotal de ratos: ${totalR}\nTotal de sapos: ${totalS}\nPercentual de coelhos: ${percentC} %\nPercentual de ratos: ${percentR} %\nPercentual de sapos: ${percentS} %`);
+</script>
+
+
+
 Iniciante 1094
 <script>
     let A = Number(lines[0]);
@@ -820,11 +884,21 @@ Iniciante 1095
 
 Iniciante 1096
 <script>
-    //não fiz ainda
-    let J = [7, 6, 5];
-    for (let i = 1; i <9; i ++) {
+    for(let i=1; i<=9; i+=2){
+        console.log(`I=${i} J=7\nI=${i} J=6\nI=${i} J=5`);
+    }
+</script>
 
-        console.log(`I = ${i} J = ${J}`);
+
+Iniciante 1101
+<script>
+    let i = 0;
+    while(i<2) {
+    let M = Number(lines[0]);
+    let N = Number(lines[1]);
+    if(M === 0 || N === 0){
+        break;
+    }
     }
 </script>
 
