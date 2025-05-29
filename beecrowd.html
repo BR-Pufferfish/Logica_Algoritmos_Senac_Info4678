@@ -518,15 +518,30 @@ Iniciante 1048
 
 Iniciante 1049
 <script>
-    let A = parseFloat(lines[0]);
-    let B = parseFloat(lines[1]);
-    let C = parseFloat(lines[2]);
-    let D = parseFloat(lines[3]);
-    let E = parseFloat(lines[4]);
-    let F = parseFloat(lines[5]);
-    let valores = [A, B, C, D, E, F];
-    let result = (valores.filter(value => value >= 0)).length;
-    console.log(`${result} valores positivos`);
+    let A = lines[0].toString;
+    let B = lines[1].toString;
+    let C = lines[2].toString;
+    const animais = {
+        'vertebrado' : {
+            'ave' : {
+                'carnivoro' : 'aguia' , 'onivoro' : 'pombo'
+            },
+            'mamifero' : {
+                'onivoro' : 'homem' , 'herbivoro' : 'vaca'
+            }
+        },
+        'invertebrado' : {
+            'inseto' : {
+                'hematofago' : 'pulga' , 'herbivoro' : 'lagarta'
+            },
+            'anelideo' : {
+                'hematofago' : 'sanguessuga' , 'onivoro' : 'minhoca'
+            }
+        }
+    };
+    animais[lines[0]][lines[1]][lines[2]];
+    // animais[`'${lines[0]}'`][`'${lines[1]}'`][`'${lines[2]}'`];
+
 </script>
 
 
@@ -893,7 +908,7 @@ Iniciante 1096
 Iniciante 1101
 <script>
     let i = 0;
-    while(i<2) {
+    while( i<2) {
     let M = Number(lines[0]);
     let N = Number(lines[1]);
     if(M === 0 || N === 0){
@@ -982,18 +997,8 @@ Iniciante 1132
     let B = Number(lines[1]);
     if (A > B) {
         let X = 
-    } else {
+    }else{
 
-    }
-    for (let i = X; i < Y; i++) {
-        let valores = lines[i].split(" ");
-        if (A > B) {
-            console.log("Decrescente");
-        } else if (A < B) {
-            console.log("Crescente");
-        } else {
-            break;
-        }
     }
 </script>
 
