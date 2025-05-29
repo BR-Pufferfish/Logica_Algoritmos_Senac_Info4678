@@ -905,6 +905,27 @@ Iniciante 1096
 </script>
 
 
+Iniciante 1099
+<script>
+    let N = parseInt(lines[0]);
+    for(let i=1; i<=N; i++){
+        let valores = lines[i].split(" ");
+        let ordenado = [];
+        ordenado.push(valores[0], valores[1]);
+        let X = parseInt(Math.min(...ordenado));
+        X += 1;
+        let Y = parseInt(Math.max(...ordenado));
+        let somaImp = 0;
+        for(let i2=X; i2<Y; i2++){
+            if(i2 %2 !== 0){
+                somaImp += i2;
+            }
+        }
+        console.log(somaImp);
+    }
+</script>
+
+
 Iniciante 1101
 <script>
     let i = 0;
@@ -993,12 +1014,35 @@ Iniciante 1117
 
 Iniciante 1132
 <script>
-    let A = Number(lines[0]);
-    let B = Number(lines[1]);
-    if (A > B) {
-        let X = 
-    }else{
+    let val1 = parseInt(lines[0]);
+    let val2 = parseInt(lines[1]);
+    let ordem = [];
+    ordem.push(val1, val2);
+    let X = Number(Math.min(...ordem));
+    let Y = Number(Math.max(...ordem));
+    let soma = null;
+    for(let i=X; i<Y; i++){
+        if(i%13 !== 0){
+            soma += i;
+        }
+    }
+    console.log(soma);
+</script>
 
+
+Iniciante 1132
+<script>
+    let val1 = parseInt(lines[0]);
+    let val2 = parseInt(lines[1]);
+    let ordem = [];
+    ordem.push(val1, val2);
+    let X = Number(Math.min(...ordem));
+    X += 1;
+    let Y = Number(Math.max(...ordem));
+    for(let i=X; i<Y; i++){
+        if(i%5 === 2 || i%5 === 3){
+            console.log(i);
+        }
     }
 </script>
 
@@ -1049,13 +1093,13 @@ Iniciante 1142
 </script>
 
 
-Iniciante 10
+Iniciante 1143
 <script>
-    let A = Number(lines[0]);
-    let B = Number(lines[1]);
-    let soma = 0;
-    for () {
-
+    let A = parseInt(lines[0]);
+    for(let i=1; i<=A; i++){
+        let quadrado = i*i;
+        let cubo = i*i*i;
+        console.log(`${i} ${quadrado} ${cubo}`);
     }
 </script>
 
