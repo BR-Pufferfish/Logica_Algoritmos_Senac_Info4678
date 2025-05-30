@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 78</title>
+</head>
+<body>
+    <p>78. Escreva um programa que leia 15 números e guarde-os em um vetor. No final, mostre o vetor inteiro na tela e em seguida mostre em que posições foram digitados valores que são múltiplos de 10. </p>
+    <button onclick="show()">Mostre-me</button>
+
+    <script>
+        function show(){
+            let array = [];
+            let multi10 = [];
+            for(var i=0; i<15; i++){
+                //Gerador de 15 valores pra agilizar o teste
+                let A = Number(Math.trunc(Math.random()*999));
+                //let A = prompt('Digite um valor')
+                if(A%10 === 0){
+                    multi10.push(i)
+                }
+                array.push(A);
+            }
+            console.log(array);
+            console.log(`Posição dos múltiplos de 10: ${multi10}`);
+        }
+    </script>
+</body>
+</html>

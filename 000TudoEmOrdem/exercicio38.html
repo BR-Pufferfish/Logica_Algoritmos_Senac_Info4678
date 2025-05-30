@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 28</title>
+</head>
+<body>
+    <p>38. Escreva um programa que mostre na tela a seguinte contagem:
+        6 7 8 9 10 11 Acabou!
+    </p>
+    <button onclick="show()">Mostre-me</button>
+
+    <script>
+        function show(){
+        var todos = "";
+        for (var i=6; i<12; i++){
+            todos = todos +" "+ i;
+        }
+        todos = todos + " Acabou!";
+        console.log(todos);
+    }
+    </script>
+</body>
+</html>

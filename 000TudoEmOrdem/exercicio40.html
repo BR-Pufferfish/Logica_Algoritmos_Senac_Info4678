@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 40</title>
+</head>
+<body>
+    <p>40. Crie um aplicativo que mostre na tela a seguinte contagem: 
+        0 3 6 9 12 15 18 Acabou!
+    </p>
+    <button onclick="show()">Mostre-me</button>
+
+    <script>
+        function show(){
+        var todos = "";
+        for (var i=0; i<19; i+=3){
+            todos = todos +" "+ i;
+        }
+        todos = todos + " Acabou!";
+        console.log(todos);
+    }
+    </script>
+</body>
+</html>

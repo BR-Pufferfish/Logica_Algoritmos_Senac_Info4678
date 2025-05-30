@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 47</title>
+</head>
+<body>
+    <p>47. Desenvolva um aplicativo que mostre na tela o resultado da expressão 500 + 450 + 400 + 350 + 300 + ... + 50 + 0 </p>
+    <button onclick="show()">Mostre-me</button>
+
+    <script>
+        function show(){
+        let soma = Number("");
+        for (let i=500; i>=0; i-=50){
+            soma = soma + i;
+            console.log(i);
+        }
+        console.log(soma);
+    }
+    </script>
+</body>
+</html>

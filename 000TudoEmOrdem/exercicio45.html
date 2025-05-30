@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 45</title>
+</head>
+<body>
+    <p>45. O programa acima vai ter um problema quando digitarmos o primeiro valor maior que o último. Resolva esse problema com um código que funcione em qualquer situação. 
+    </p>
+    <button onclick="show()">Mostre-me</button>
+
+    <script>
+        function show(){
+            let A = Number(prompt('Primeiro valor'));
+            let B = Number(prompt('Segundo valor'));
+            let add = Number(prompt('Incremento'));
+            let tudo = "";
+            if(A < B){
+                let i = A;
+                for(i; i<B; i+=add){
+                    tudo = tudo + i + " ";
+                }
+                tudo = tudo + "Acabou!";
+                console.log(tudo);
+
+            }else if(A > B){
+                let i = A;
+                for(i; i>B; i-=add){
+                tudo = tudo + i + " ";
+                }
+                tudo = tudo + "Acabou!";
+                console.log(tudo);
+
+            }else{
+                console.log("Os valores Inicial e Final são iguais.");
+            }
+        }
+    </script>
+</body>
+</html>

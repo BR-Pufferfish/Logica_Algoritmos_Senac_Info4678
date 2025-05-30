@@ -524,7 +524,7 @@ Iniciante 1049
     const animais = {
         'vertebrado' : {
             'ave' : {
-                'carnivoro' : 'aguia' , 'onivoro' : 'pombo'
+                'carnivoro' : 'aguia' , 'onivoro' : 'pomba'
             },
             'mamifero' : {
                 'onivoro' : 'homem' , 'herbivoro' : 'vaca'
@@ -539,9 +539,7 @@ Iniciante 1049
             }
         }
     };
-    animais[lines[0]][lines[1]][lines[2]];
-    // animais[`'${lines[0]}'`][`'${lines[1]}'`][`'${lines[2]}'`];
-
+    console.log(animais[lines[0]][lines[1]][lines[2]]);
 </script>
 
 
@@ -1012,6 +1010,25 @@ Iniciante 1117
 </script>
 
 
+Iniciante 1118
+<script>
+    for(let i=0; i<lines.lenght; i++){
+        let A = parseFloat(lines[i]);
+        let aInt = Number(lines[i]);
+        let isValid = A >=0 || A <= 10;
+        let media = new Array(2);
+        if(isValid){
+            media.push(A);
+            if(media.lenght === 2){
+                media = Number((media[0] + media[1]) / media.lenght);
+                console.log(`media = ${media}`);
+            }
+            
+        }
+    }
+</script>
+
+
 Iniciante 1132
 <script>
     let val1 = parseInt(lines[0]);
@@ -1100,17 +1117,6 @@ Iniciante 1143
         let quadrado = i*i;
         let cubo = i*i*i;
         console.log(`${i} ${quadrado} ${cubo}`);
-    }
-</script>
-
-
-Iniciante 10
-<script>
-    let A = Number(lines[0]);
-    let B = Number(lines[1]);
-    let soma = 0;
-    for () {
-
     }
 </script>
 
