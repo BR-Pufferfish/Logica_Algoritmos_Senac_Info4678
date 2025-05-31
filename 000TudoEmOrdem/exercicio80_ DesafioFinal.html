@@ -11,17 +11,33 @@
 
     <script>
         function show(){
+            //Ainda não tá pronto.
 
             //Gerar 15 valores e jogar pro array.
-            let array = new Array[15];
+            let array = new Array(15);
             for(var i=0; i<15; i++){
                 let A = Number(Math.trunc(Math.random()*99));
                 array[i] = A;
             }
+            console.log(`Array Original = ${array}`);
             
-            let compare = null;
-            for(i=0; i<15; i++){
-                compare = array[i];
+            let trocas = 0;
+            let aux = null;
+            // array = [2, 4, 7, 1, 0];
+            // array = [0, 1, 2, 3, 4];
+            for(i=0; i<array.length; i++){
+                if(array[i] > array[i+1]){
+                    trocas +=1;
+                    aux = array[i];
+                    array[i] = array[i+1];
+                    array[i+1] = aux;
+                }
+                aux = null;
+                if(trocas === 0){
+                    break;
+                }
+                trocas = 0;
+                console.log(array);
             }
 
         }
