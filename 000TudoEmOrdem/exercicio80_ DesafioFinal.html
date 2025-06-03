@@ -21,25 +21,23 @@
             }
             console.log(`Array Original = ${array}`);
             
-            let trocas = 0;
             let aux = null;
             // array = [2, 4, 7, 1, 0];
             // array = [0, 1, 2, 3, 4];
-            for(i=0; i<array.length; i++){
-                if(array[i] > array[i+1]){
-                    trocas +=1;
-                    aux = array[i];
-                    array[i] = array[i+1];
-                    array[i+1] = aux;
+            for(i=1; i<array.length; i++){
+                if(array[i] < array[i-1]){
+                    for(let i2=i; i2>0; i2--){
+                        if(array[i2]<array[i2-1]){
+                            aux = array[i2];
+                            array[i2] = array[i2-1];
+                            array[i2-1] = aux;
+                        }else{
+                            break;
+                        }
+                    }
                 }
-                aux = null;
-                if(trocas === 0){
-                    break;
-                }
-                trocas = 0;
-                console.log(array);
             }
-
+            console.log(array);
         }
     </script>
 </body>
