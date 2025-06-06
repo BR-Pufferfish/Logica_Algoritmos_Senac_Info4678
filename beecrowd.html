@@ -929,13 +929,27 @@ Iniciante 1099
 
 Iniciante 1101
 <script>
-    let i = 0;
-    while( i<2) {
-    let M = Number(lines[0]);
-    let N = Number(lines[1]);
-    if(M === 0 || N === 0){
-        break;
-    }
+    let i=0;
+    while(i>=0){
+        let valores = lines[i].split(" ");
+        let ordem = [];
+        ordem.push(valores[0], valores[1]);
+        let M = Number(Math.min(...ordem));
+        let N = Number(Math.max(...ordem));
+        let soma = null;
+        let sequencia = "";
+        if(M+N > N && M+N > M){
+            let i2 = M;
+            while(i2<N+1){
+                soma += i2;
+                sequencia += i2 + " ";
+                i2++;
+            }
+            console.log(`${sequencia}Sum=${soma}`);
+        }else{
+            i = i*-1;
+        }
+        i++;
     }
 </script>
 
@@ -1124,34 +1138,43 @@ Iniciante 1143
 </script>
 
 
-Iniciante 10
+Iniciante 1153
 <script>
-    let A = Number(lines[0]);
-    let B = Number(lines[1]);
-    let soma = 0;
-    for () {
-
+    let N = parseInt(lines[0]);
+    let resul = N;
+    for(let i=N-1; i>=1; i--){
+        resul *= Number(N-i);
     }
+    console.log(resul);
 </script>
 
 
-Iniciante 10
+Iniciante 1154
 <script>
-    let A = Number(lines[0]);
-    let B = Number(lines[1]);
-    let soma = 0;
-    for () {
-
+    let i=0;
+    let media = 0;
+    let contador = 0;
+    while(i>=0){
+        let A = parseInt(lines[i]);
+        if(A<=0){
+            i = i*-1;
+        }else{
+            media += A;
+            contador ++;
+        }
+        i++;
     }
+    let resul = parseFloat(Number(media/contador)).toFixed(2);
+    console.log(resul);
 </script>
 
 
-Iniciante 10
+Iniciante 1155
 <script>
-    let A = Number(lines[0]);
-    let B = Number(lines[1]);
-    let soma = 0;
-    for () {
-
+let S = 1;
+    for(let i=2; i<=100; i++){
+        let div = Number(1/i);
+        S += div;
     }
+    console.log((S).toFixed(2));
 </script>
