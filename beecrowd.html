@@ -1138,6 +1138,27 @@ Iniciante 1143
 </script>
 
 
+Iniciante 1145
+<script>
+    let valor = lines[0].split(" ");
+    let X = parseInt(valor[0]);
+    let Y = parseInt(valor[1]);
+    let arr = "";
+    let cont = 0;
+    for(let i=1; i<=Y; i++){
+        cont++;
+        arr += i;
+        if(cont === X){
+            console.log(arr);
+            cont = null;
+            arr = null;
+        }else{
+            arr += " ";
+        }
+    }
+</script>
+
+
 Iniciante 1153
 <script>
     let N = parseInt(lines[0]);
@@ -1177,4 +1198,15 @@ let S = 1;
         S += div;
     }
     console.log((S).toFixed(2));
+</script>
+
+
+Iniciante 1157
+<script>
+    let N = parseInt(lines[0]);
+    for (let i=0; i<=N; i++){
+        if(N%i === 0){
+            console.log(i);
+        }
+    }
 </script>
